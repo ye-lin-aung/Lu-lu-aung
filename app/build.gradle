@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+def baseURL = "https://graph.facebook.com/"
+def access_token = "1687456281579642%7Cfea2056413885caf86cedf99148afe7a"
+
+android {
+  compileSdkVersion 24
+  buildToolsVersion "24.0.1"
+  defaultConfig {
+    applicationId "com.yelinaung.luluaung"
+    minSdkVersion 19
+    targetSdkVersion 21
+    versionCode 1
+    versionName "1.0"
+    dataBinding {
+      enabled = true
+      version = "2.0.0"
+    }
+    buildConfigField('String','BASE_URL',"\"${baseURL}\"")
+    buildConfigField('String','ACESS_TOKEN',"\"${access_token}\"")
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+  }
+}
+kapt {
+  generateStubs = true
+}
+
+
+  dependencies {
+     compile project(':andrilsutil')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+      exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'com.google.dagger:dagger:2.0'
+    kapt 'com.google.dagger:dagger-compiler:2.0'
+
+    kapt 'com.android.databinding:compiler:2.0.0-beta6'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.mcxiaoke.koi:core:0.5.3' // useful extensions (only ~100k)
+    compile 'com.mcxiaoke.koi:async:0.5.3'
+
+    compile 'io.reactivex:rxandroid:1.2.1'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex:rxjava:1.1.6'
+
+    compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
+
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-annotations:24.2.0'
+    compile 'com.android.support:support-v4:24.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  }
+
+repositories {
+  mavenCentral()
+}
