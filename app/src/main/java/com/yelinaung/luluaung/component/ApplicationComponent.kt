@@ -1,14 +1,18 @@
 package com.yelinaung.luluaung.component
 
-import com.yelinaung.luluaung.module.RetrofitModule
-import com.yelinaung.luluaung.repo.RemoteDataRepository
+import android.content.Context
+import com.yelinaung.luluaung.module.ApplicationModule
 import dagger.Component
+import retrofit2.Retrofit
+import javax.inject.Singleton
 
 /**
  * Created by user on 9/4/16.
  */
 
-@Component(modules = arrayOf(RetrofitModule::class))
+@Singleton
+@Component(modules = arrayOf(ApplicationModule::class))
 interface ApplicationComponent {
-    fun inject(remoteSource: RemoteDataRepository);
+    fun context(): Context
+    fun retrofit(): Retrofit
 }

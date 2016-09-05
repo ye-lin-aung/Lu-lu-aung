@@ -1,4 +1,4 @@
-#Sun Sep 04 19:32:45 MMT 2016
+#Mon Sep 05 01:02:41 MMT 2016
 base.0=/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5199f410a46871b80a3fef162ccb2208bad65181
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="24dbf946720abace65b67c51db4ca99deee1d3c5">
+        sha1="80fbe7388bfc2453d291883f82b85448b55d4a5c">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5199f410a46871b80a3fef162ccb2208bad65181/classes.dex" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="3d0870e4228b477896e7d66593fc1e897b62e779">
+        sha1="e30d65d4639e9f86ea616db43fe24aace26c010e">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22910a476e3b42322fa0199bc117450c504eaa8c/classes.dex" />
     </item>
     <item
@@ -117,6 +117,15 @@
         revision="24.0.1"
         sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.databinding-adapters-1.2.1_361a1833b1402c19fa24ecdc3ab98a86935009ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.google.dagger/dagger/2.1/73ce0d997524a7fd3b06cfc7adbb9e9ef4854754/dagger-2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="73ce0d997524a7fd3b06cfc7adbb9e9ef4854754">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/dagger-2.1_2bb7f4c825d30ed7e707a7f0ac2f4b75cb2b760e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -207,15 +216,6 @@
         revision="24.0.1"
         sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_8b03c3bcf237460a7fa8a36aab4f7f045d438e14/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.google.dagger/dagger/2.0/da7ba0ee1d30edd955da276cdf01d3d7cb24aedc/dagger-2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="da7ba0ee1d30edd955da276cdf01d3d7cb24aedc">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/dagger-2.0_c751fa765fd3144113d8a1c6cab6eb85181ee841/classes.dex" />
     </item>
     <item
         is-multidex="true"
