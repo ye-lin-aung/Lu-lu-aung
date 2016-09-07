@@ -3,9 +3,14 @@ package com.yelinaung.luluaung.module
 import android.app.Application
 import android.content.Context
 import com.yelinaung.luluaung.BuildConfig
+import com.yelinaung.luluaung.threads.JobExecutor
+import com.yelinaung.luluaung.threads.PostExecutionThread
+import com.yelinaung.luluaung.threads.ThreadExecutor
+import com.yelinaung.luluaung.threads.UIThread
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
@@ -19,11 +24,14 @@ class ApplicationModule(val application: Application) {
     @Singleton
     @Provides fun context(): Context = application
 
+    @Singleton @Provides fun threadExecutor(jobExecutor: JobExecutor): ThreadExecutor = jobExecutor
+
+    @Singleton @Provides fun mainThread(uiThread: UIThread):PostExecutionThread = uiThread
 
 
     @Provides @Singleton
     fun retrofit(): Retrofit {
-        val retrofit = Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).addConverterFactory(GsonConverterFactory.create()).build()
+        val retrofit = Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).addConverterFactory(GsonConverterFactory.create()).addCallAdapterFactory(RxJavaCallAdapterFactory.create()).build()
         return retrofit
     }
 

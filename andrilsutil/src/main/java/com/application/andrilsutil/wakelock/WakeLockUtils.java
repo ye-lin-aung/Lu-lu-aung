@@ -22,8 +22,7 @@ public class WakeLockUtils {
   /**
    * Hold wake lock.
    *
-   * @param context
-   *     the context
+   * @param context the context
    */
   public static void holdWakeLock(Context context) {
     PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);

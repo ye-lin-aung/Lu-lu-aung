@@ -108,6 +108,10 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/item_progress.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/layout/item_progress.xml"
+    },
+    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_dialog_title_material.xml"
     },
@@ -140,12 +144,12 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
@@ -194,6 +198,10 @@
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/item_image_recycler.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/layout/item_image_recycler.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",

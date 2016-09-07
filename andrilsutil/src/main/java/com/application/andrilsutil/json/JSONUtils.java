@@ -23,8 +23,7 @@ public class JSONUtils {
   /**
    * Iterate over all keys of the JSON
    *
-   * @param jsonObject
-   *     the json object
+   * @param jsonObject the json object
    * @return the hash map
    */
   public static HashMap<String, String> iterateOverJSON(JSONObject jsonObject) {
@@ -45,10 +44,8 @@ public class JSONUtils {
   /**
    * Read and parse a JSON file stored in assets folder
    *
-   * @param context
-   *     the context
-   * @param filename
-   *     the filename
+   * @param context the context
+   * @param filename the filename
    * @return the json object
    */
   public JSONObject loadJSONFromAsset(Context context, String filename) {

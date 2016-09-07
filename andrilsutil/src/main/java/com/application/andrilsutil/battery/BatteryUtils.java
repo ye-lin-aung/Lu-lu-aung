@@ -21,10 +21,8 @@ public class BatteryUtils {
   /**
    * Register a listener for getting updates of device charging, discharging or completely charged.
    *
-   * @param context
-   *     the context
-   * @param batteryChargeListener
-   *     the battery charge listener
+   * @param context the context
+   * @param batteryChargeListener the battery charge listener
    */
   public static void registerBatteryChangeBroadcastReceiver(Context context,
       final BatteryChargeListener batteryChargeListener) {
@@ -33,8 +31,7 @@ public class BatteryUtils {
     theFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
 
     BroadcastReceiver batteryChargeReceiver = new BroadcastReceiver() {
-      @Override
-      public void onReceive(Context context, Intent intent) {
+      @Override public void onReceive(Context context, Intent intent) {
         int status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, 0);
 
         if (status == BatteryManager.BATTERY_STATUS_CHARGING) {
@@ -44,8 +41,7 @@ public class BatteryUtils {
         if (status == BatteryManager.BATTERY_STATUS_FULL) {
           // Is Full
           batteryChargeListener.isFull();
-        }
-        else {
+        } else {
           // Is Discharging
           batteryChargeListener.isDiscahrging();
         }

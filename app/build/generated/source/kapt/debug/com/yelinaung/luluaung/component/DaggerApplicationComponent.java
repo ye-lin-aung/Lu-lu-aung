@@ -3,7 +3,15 @@ package com.yelinaung.luluaung.component;
 import android.content.Context;
 import com.yelinaung.luluaung.module.ApplicationModule;
 import com.yelinaung.luluaung.module.ApplicationModule_ContextFactory;
+import com.yelinaung.luluaung.module.ApplicationModule_MainThreadFactory;
 import com.yelinaung.luluaung.module.ApplicationModule_RetrofitFactory;
+import com.yelinaung.luluaung.module.ApplicationModule_ThreadExecutorFactory;
+import com.yelinaung.luluaung.threads.JobExecutor;
+import com.yelinaung.luluaung.threads.JobExecutor_Factory;
+import com.yelinaung.luluaung.threads.PostExecutionThread;
+import com.yelinaung.luluaung.threads.ThreadExecutor;
+import com.yelinaung.luluaung.threads.UIThread;
+import com.yelinaung.luluaung.threads.UIThread_Factory;
 import dagger.internal.Preconditions;
 import dagger.internal.ScopedProvider;
 import javax.annotation.Generated;
@@ -18,6 +26,14 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
   private Provider<Context> contextProvider;
 
   private Provider<Retrofit> retrofitProvider;
+
+  private Provider<JobExecutor> jobExecutorProvider;
+
+  private Provider<ThreadExecutor> threadExecutorProvider;
+
+  private Provider<UIThread> uIThreadProvider;
+
+  private Provider<PostExecutionThread> mainThreadProvider;
 
   private DaggerApplicationComponent(Builder builder) {
     assert builder != null;
@@ -36,6 +52,20 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
 
     this.retrofitProvider =
         ScopedProvider.create(ApplicationModule_RetrofitFactory.create(builder.applicationModule));
+
+    this.jobExecutorProvider = ScopedProvider.create(JobExecutor_Factory.create());
+
+    this.threadExecutorProvider =
+        ScopedProvider.create(
+            ApplicationModule_ThreadExecutorFactory.create(
+                builder.applicationModule, jobExecutorProvider));
+
+    this.uIThreadProvider = ScopedProvider.create(UIThread_Factory.create());
+
+    this.mainThreadProvider =
+        ScopedProvider.create(
+            ApplicationModule_MainThreadFactory.create(
+                builder.applicationModule, uIThreadProvider));
   }
 
   @Override
@@ -46,6 +76,16 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
   @Override
   public Retrofit retrofit() {
     return retrofitProvider.get();
+  }
+
+  @Override
+  public ThreadExecutor exeThread() {
+    return threadExecutorProvider.get();
+  }
+
+  @Override
+  public PostExecutionThread uiThread() {
+    return mainThreadProvider.get();
   }
 
   public static final class Builder {

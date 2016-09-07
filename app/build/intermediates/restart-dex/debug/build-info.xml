@@ -5,33 +5,47 @@
     density="xhdpi"
     format="8"
     plugin-version="2.2.0-rc1"
-    timestamp="91000742191455"
+    timestamp="60905170171533"
     token="4995143927307750394"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="2302" />
+        duration="2875" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="11" />
     <task
         name="instant-run-transform"
-        duration="781" />
+        duration="25" />
     <task
         name="verifier"
-        duration="68" />
+        duration="2" />
 
     <artifact
-        location="/Users/user/Desktop/WorkProjects/luluaung/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="91000742191455"
+        timestamp="60769422075606"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/user/Desktop/WorkProjects/luluaung/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="60881881405648"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/builds/debug/60881881405648/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="60905170171533"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

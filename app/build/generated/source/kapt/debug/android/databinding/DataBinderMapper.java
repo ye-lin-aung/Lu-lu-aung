@@ -7,8 +7,6 @@ class DataBinderMapper {
     }
     public android.databinding.ViewDataBinding getDataBinder(android.databinding.DataBindingComponent bindingComponent, android.view.View view, int layoutId) {
         switch(layoutId) {
-                case com.yelinaung.luluaung.R.layout.activity_main:
-                    return com.yelinaung.luluaung.databinding.ActivityMainBinding.bind(view, bindingComponent);
                 case com.yelinaung.luluaung.R.layout.layout_toolbar:
                     return com.yelinaung.luluaung.databinding.LayoutToolbarBinding.bind(view, bindingComponent);
         }
@@ -25,12 +23,6 @@ class DataBinderMapper {
         }
         final int code = tag.hashCode();
         switch(code) {
-            case 423753077: {
-                if(tag.equals("layout/activity_main_0")) {
-                    return com.yelinaung.luluaung.R.layout.activity_main;
-                }
-                break;
-            }
             case 1978887644: {
                 if(tag.equals("layout/layout_toolbar_0")) {
                     return com.yelinaung.luluaung.R.layout.layout_toolbar;

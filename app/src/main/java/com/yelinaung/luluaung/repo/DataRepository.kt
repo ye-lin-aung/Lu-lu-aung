@@ -1,6 +1,7 @@
 package com.yelinaung.luluaung.repo
 
-import com.yelinaung.luluaung.model.network.Datum
+import com.yelinaung.luluaung.model.network.Item
+import rx.Observable
 import javax.inject.Inject
 
 /**
@@ -8,34 +9,26 @@ import javax.inject.Inject
  */
 
 
-
 class DataRepository : Repository {
+
+
     @Inject lateinit var dataRepository: RemoteDataRepository
-    var map = mutableMapOf<String, Datum>()
 
-    fun putItem(data: Datum) {
-        if (!map.containsValue(data)) {
-            map.put(data.id!!, data)
-        }
+    @Inject constructor()
 
+    var datas: Observable<Item> = Observable.empty()
+
+    fun cacheData(): Observable<Item> {
+        return datas
     }
 
-    fun getItems(): List<Datum> {
-        return map.values.toList()
+    override fun getDataByPages(page: String): Observable<Item> {
+        datas = datas.mergeWith(dataRepository.getDataByPages(page))
+        return datas
     }
 
-    fun remoteItem(data: Datum) {
-        if (map.containsValue(data)) {
-            map.remove(data.id!!)
-        }
-    }
-
-    fun paginateData() {
-        dataRepository.getData()
-    }
-
-    override fun getData(): List<Datum> {
-        return map.values.toList()
+    override fun getData(): Observable<Item> {
+        throw UnsupportedOperationException("No need")
     }
 }
 

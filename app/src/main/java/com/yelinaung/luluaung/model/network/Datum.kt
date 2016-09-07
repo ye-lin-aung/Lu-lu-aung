@@ -53,4 +53,8 @@ class Datum {
         return this
     }
 
+    override fun toString(): String {
+        return "Datum(id=$id, images=$images, name=$name)"
+    }
+
 }

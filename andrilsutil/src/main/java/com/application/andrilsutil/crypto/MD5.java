@@ -17,8 +17,7 @@ public class MD5 {
   /**
    * Get MD5 value for a string
    *
-   * @param input
-   *     the input
+   * @param input the input
    * @return the string
    */
   public static String md5(String input) {

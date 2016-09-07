@@ -18,8 +18,7 @@ public class ActivityUtils {
   /**
    * Sets the activity in Fullscreen mode
    *
-   * @param activity
-   *     the activity
+   * @param activity the activity
    */
   public static void setFullScreen(Activity activity) {
     // Call before calling setContentView();
@@ -31,8 +30,7 @@ public class ActivityUtils {
   /**
    * Hides the activity's action bar
    *
-   * @param activity
-   *     the activity
+   * @param activity the activity
    */
   public static void hideActionBar(Activity activity) {
     // Call before calling setContentView();

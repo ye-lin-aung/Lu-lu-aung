@@ -2,6 +2,8 @@ package com.yelinaung.luluaung.component
 
 import android.content.Context
 import com.yelinaung.luluaung.module.ApplicationModule
+import com.yelinaung.luluaung.threads.PostExecutionThread
+import com.yelinaung.luluaung.threads.ThreadExecutor
 import dagger.Component
 import retrofit2.Retrofit
 import javax.inject.Singleton
@@ -15,4 +17,6 @@ import javax.inject.Singleton
 interface ApplicationComponent {
     fun context(): Context
     fun retrofit(): Retrofit
+    fun exeThread(): ThreadExecutor
+    fun uiThread(): PostExecutionThread
 }

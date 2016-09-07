@@ -20,12 +20,9 @@ public class BroadcastReceiverUtils {
   /**
    * Enable/Disable Broadcast Receiver
    *
-   * @param context
-   *     the context
-   * @param brClass
-   *     the br class
-   * @param enabled
-   *     the enabled
+   * @param context the context
+   * @param brClass the br class
+   * @param enabled the enabled
    */
   public static void setStateOfReceiver(Context context, Class<?> brClass, boolean enabled) {
     ComponentName receiverName = new ComponentName(context, brClass.getName());
@@ -34,8 +31,7 @@ public class BroadcastReceiverUtils {
     int newstate;
     if (enabled) {
       newstate = PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
-    }
-    else {
+    } else {
       newstate = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
     }
 
@@ -45,14 +41,10 @@ public class BroadcastReceiverUtils {
   /**
    * Broadcast data as a message
    *
-   * @param context
-   *     the context
-   * @param data
-   *     the data
-   * @param action
-   *     the action
-   * @param custompermission
-   *     the custompermission
+   * @param context the context
+   * @param data the data
+   * @param action the action
+   * @param custompermission the custompermission
    */
   public static void broadcastData(Context context, String data, String action,
       String custompermission) {

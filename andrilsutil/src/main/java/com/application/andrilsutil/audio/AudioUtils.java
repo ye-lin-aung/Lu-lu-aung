@@ -17,10 +17,8 @@ public class AudioUtils {
   /**
    * Get a valid sample rate for the device
    *
-   * @param channelConfiguration
-   *     the channel configuration
-   * @param audioEncoding
-   *     the audio encoding
+   * @param channelConfiguration the channel configuration
+   * @param audioEncoding the audio encoding
    * @return the valid sample rates
    */
   public static int getValidSampleRates(int channelConfiguration, int audioEncoding) {
@@ -38,14 +36,10 @@ public class AudioUtils {
   /**
    * Check correct buffer size for your AudioRecord instance
    *
-   * @param audioSource
-   *     the audio source
-   * @param fs
-   *     the fs
-   * @param channelConfiguration
-   *     the channel configuration
-   * @param audioEncoding
-   *     the audio encoding
+   * @param audioSource the audio source
+   * @param fs the fs
+   * @param channelConfiguration the channel configuration
+   * @param audioEncoding the audio encoding
    * @return the int
    */
   public static int checkCorrectBufferSize(int audioSource, int fs, int channelConfiguration,

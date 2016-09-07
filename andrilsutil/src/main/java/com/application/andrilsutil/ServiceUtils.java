@@ -18,10 +18,8 @@ public class ServiceUtils {
   /**
    * Check if the service is running in the device.
    *
-   * @param context
-   *     the context
-   * @param serviceClass
-   *     the service class
+   * @param context the context
+   * @param serviceClass the service class
    * @return boolean boolean
    */
   public static boolean isServiceRunning(Context context, Class<?> serviceClass) {

@@ -28,20 +28,20 @@ public class TimeUtils {
     Date now = new Date();
     CharSequence ago = null;
     if (duration >= ONE_SECOND) {
-      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(),
-          DateUtils.SECOND_IN_MILLIS, DateUtils.FORMAT_ABBREV_RELATIVE);
+      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(), DateUtils.SECOND_IN_MILLIS,
+          DateUtils.FORMAT_ABBREV_RELATIVE);
       return ago.toString();
     } else if (duration > ONE_MINUTE) {
-      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(),
-          DateUtils.MINUTE_IN_MILLIS, DateUtils.FORMAT_ABBREV_RELATIVE);
+      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(), DateUtils.MINUTE_IN_MILLIS,
+          DateUtils.FORMAT_ABBREV_RELATIVE);
       return ago.toString();
     } else if (duration > ONE_HOUR) {
-      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(),
-          DateUtils.HOUR_IN_MILLIS, DateUtils.FORMAT_ABBREV_RELATIVE);
+      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(), DateUtils.HOUR_IN_MILLIS,
+          DateUtils.FORMAT_ABBREV_RELATIVE);
       return ago.toString();
     } else if (duration > ONE_DAY) {
-      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(),
-          DateUtils.DAY_IN_MILLIS, DateUtils.FORMAT_ABBREV_RELATIVE);
+      ago = DateUtils.getRelativeTimeSpanString(duration, now.getTime(), DateUtils.DAY_IN_MILLIS,
+          DateUtils.FORMAT_ABBREV_RELATIVE);
       return ago.toString();
     } else {
       ago = "just now";

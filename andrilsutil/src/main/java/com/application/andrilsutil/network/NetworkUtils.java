@@ -20,8 +20,7 @@ public class NetworkUtils {
   /**
    * Check if there is any connectivity
    *
-   * @param context
-   *     the context
+   * @param context the context
    * @return boolean boolean
    */
   public static boolean isConnected(Context context) {
@@ -32,8 +31,7 @@ public class NetworkUtils {
   /**
    * Get the network info
    *
-   * @param context
-   *     the context
+   * @param context the context
    * @return network info
    */
   public static NetworkInfo getNetworkInfo(Context context) {
@@ -45,8 +43,7 @@ public class NetworkUtils {
   /**
    * Check if there is any connectivity to a Wifi network
    *
-   * @param context
-   *     the context
+   * @param context the context
    * @return boolean boolean
    */
   public static boolean isConnectedWifi(Context context) {
@@ -57,8 +54,7 @@ public class NetworkUtils {
   /**
    * Check if there is any connectivity to a mobile network
    *
-   * @param context
-   *     the context
+   * @param context the context
    * @return boolean boolean
    */
   public static boolean isConnectedMobile(Context context) {
@@ -71,8 +67,7 @@ public class NetworkUtils {
   /**
    * Check if there is fast connectivity
    *
-   * @param context
-   *     the context
+   * @param context the context
    * @return boolean boolean
    */
   public static boolean isConnectedFast(Context context) {
@@ -84,17 +79,14 @@ public class NetworkUtils {
   /**
    * Check if the connection is fast
    *
-   * @param type
-   *     the type
-   * @param subType
-   *     the sub type
+   * @param type the type
+   * @param subType the sub type
    * @return boolean boolean
    */
   public static boolean isConnectionFast(int type, int subType) {
     if (type == ConnectivityManager.TYPE_WIFI) {
       return true;
-    }
-    else if (type == ConnectivityManager.TYPE_MOBILE) {
+    } else if (type == ConnectivityManager.TYPE_MOBILE) {
       switch (subType) {
         case TelephonyManager.NETWORK_TYPE_1xRTT:
           return false; // ~ 50-100 kbps
@@ -135,8 +127,7 @@ public class NetworkUtils {
         default:
           return false;
       }
-    }
-    else {
+    } else {
       return false;
     }
   }

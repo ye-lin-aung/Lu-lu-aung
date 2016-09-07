@@ -21,13 +21,11 @@ public class WebViewUtils {
   /**
    * Enable java script.
    *
-   * @param webView
-   *     the web view
-   * @param enabled
-   *     the enabled
+   * @param webView the web view
+   * @param enabled the enabled
    */
-  @SuppressLint("SetJavaScriptEnabled")
-  public static void enableJavaScript(WebView webView, boolean enabled) {
+  @SuppressLint("SetJavaScriptEnabled") public static void enableJavaScript(WebView webView,
+      boolean enabled) {
     if (webView != null) {
       webView.getSettings().setJavaScriptEnabled(enabled);
     }
@@ -36,8 +34,7 @@ public class WebViewUtils {
   /**
    * Enable web view debugging.
    *
-   * @param enabled
-   *     the enabled
+   * @param enabled the enabled
    */
   public static void enableWebViewDebugging(boolean enabled) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -48,14 +45,12 @@ public class WebViewUtils {
   /**
    * Sync cookie with system browser.
    *
-   * @param context
-   *     the context
+   * @param context the context
    */
   public static void syncCookieWithSystemBrowser(Context context) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       CookieManager.getInstance().flush();
-    }
-    else {
+    } else {
       CookieSyncManager.createInstance(context);
       CookieSyncManager.getInstance().startSync();
       CookieSyncManager.getInstance().sync();

@@ -16,8 +16,7 @@ public class EncodeDecodeBase64 {
   /**
    * Encode message using Base64 encoding
    *
-   * @param message
-   *     the message
+   * @param message the message
    * @return the string
    */
   public static String encodedMessage(String message) {
@@ -27,8 +26,7 @@ public class EncodeDecodeBase64 {
   /**
    * Decode encoded message using Base64
    *
-   * @param message
-   *     the message
+   * @param message the message
    * @return the string
    */
   public static String decodedMessage(String message) {

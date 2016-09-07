@@ -1,6 +1,6 @@
 package com.yelinaung.luluaung.component
 
-import com.yelinaung.luluaung.MainActivity
+import com.yelinaung.luluaung.views.activities.MainActivity
 import com.yelinaung.luluaung.module.DataModule
 import com.yelinaung.luluaung.scope.RepoScope
 import dagger.Component
@@ -10,6 +10,6 @@ import dagger.Component
  */
 @RepoScope
 @Component(dependencies = arrayOf(ApplicationComponent::class), modules = arrayOf(DataModule::class))
-interface DataComponent:RemoteComponent{
+interface DataComponent : RemoteComponent {
     fun inject(mainActivity: MainActivity);
 }

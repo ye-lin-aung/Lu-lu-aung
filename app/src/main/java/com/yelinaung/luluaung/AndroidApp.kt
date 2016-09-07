@@ -8,7 +8,11 @@ import com.yelinaung.luluaung.module.ApplicationModule
 /**
  * Created by user on 9/4/16.
  */
+
+
 class AndroidApp : Application() {
+
+
 
     lateinit var applicationComponent: ApplicationComponent
 
@@ -19,6 +23,7 @@ class AndroidApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
         applicationComponent = DaggerApplicationComponent.builder().applicationModule(ApplicationModule(this)).build();
         repoComponent = DaggerRemoteComponent.builder().applicationComponent(applicationComponent).build()
         dataComponent = DaggerDataComponent.builder().applicationComponent(applicationComponent).build()

@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-		xmlns:tools="http://schemas.android.com/tools">
 
-	<LinearLayout
-			android:id="@+id/activity_main"
+
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/activity_main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:context=".views.activities.MainActivity"
+		>
+
+	<include
+			android:id="@+id/toolbar"
+			layout="@layout/layout_toolbar"/>
+
+	<FrameLayout
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:orientation="vertical"
-			tools:context=".MainActivity"
-	>
+			android:layout_height="match_parent">
 
-		<include
-				android:id="@+id/toolbar"
-				layout="@layout/layout_toolbar"/>
+		<ProgressBar
+				android:id="@+id/progess"
+				android:layout_gravity="center"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
 
-		<TextView
+		<com.yelinaung.luluaung.views.activities.AutofitRecyclerView
+				android:layout_gravity="center"
+				android:id="@+id/item_rec"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
-				android:textColor="@color/colorPrimary"
-				android:gravity="center"
-				android:text="@string/welcome_text"
-				android:layout_gravity="center"/>
-	</LinearLayout>
-</layout>
+				android:columnWidth="@dimen/colum_width"
+				android:verticalSpacing="@dimen/grid_spacing"
+				android:horizontalSpacing="@dimen/grid_spacing"
+				android:drawSelectorOnTop="true"
+				android:clipToPadding="false"
+				android:padding="@dimen/spacing_micro"
+				android:scrollbars="none"
+				android:focusable="false"
+				android:clickable="true"
+				android:visibility="gone"
+				android:orientation="vertical"/>
+	</FrameLayout>
+</LinearLayout>
+

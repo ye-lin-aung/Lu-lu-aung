@@ -22,14 +22,10 @@ public class OkHTTPUtils {
   /**
    * Save the response as a binary file i.e html file.
    *
-   * @param context
-   *     the context
-   * @param filename
-   *     the filename
-   * @param response
-   *     the response
-   * @throws IOException
-   *     the io exception
+   * @param context the context
+   * @param filename the filename
+   * @param response the response
+   * @throws IOException the io exception
    */
   public static void saveBinaryFileFromResponse(Context context, String filename, Response response)
       throws IOException {

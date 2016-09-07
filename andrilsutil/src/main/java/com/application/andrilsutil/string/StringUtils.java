@@ -15,8 +15,7 @@ public class StringUtils {
   /**
    * Convert string to title case
    *
-   * @param input
-   *     the input
+   * @param input the input
    * @return the string
    */
   public static String toTitleCase(String input) {
@@ -26,8 +25,7 @@ public class StringUtils {
     for (char c : input.toCharArray()) {
       if (Character.isSpaceChar(c)) {
         nextTitleCase = true;
-      }
-      else if (nextTitleCase) {
+      } else if (nextTitleCase) {
         c = Character.toTitleCase(c);
         nextTitleCase = false;
       }
@@ -41,10 +39,8 @@ public class StringUtils {
   /**
    * Remove the last specified character
    *
-   * @param stringText
-   *     the string text
-   * @param endingChar
-   *     the ending char
+   * @param stringText the string text
+   * @param endingChar the ending char
    * @return the string
    */
   public static String removeLastChar(String stringText, String endingChar) {

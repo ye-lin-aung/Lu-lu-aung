@@ -93,8 +93,7 @@ public class AesCbcWithIntegrity {
    * Converts the given AES/HMAC keys into a base64 encoded string suitable for
    * storage. Sister function of keys.
    *
-   * @param keys
-   *     The combined aes and hmac keys
+   * @param keys The combined aes and hmac keys
    * @return a base 64 encoded AES string & hmac key as base64(aesKey) : base64(hmacKey)
    */
   public static String keyString(SecretKeys keys) {
@@ -105,19 +104,16 @@ public class AesCbcWithIntegrity {
    * An aes key derived from a base64 encoded key. This does not generate the
    * key. It's not random or a PBE key.
    *
-   * @param keysStr
-   *     a base64 encoded AES key / hmac key as base64(aesKey) : base64(hmacKey).
+   * @param keysStr a base64 encoded AES key / hmac key as base64(aesKey) : base64(hmacKey).
    * @return an AES & HMAC key set suitable for other functions.
-   * @throws InvalidKeyException
-   *     the invalid key exception
+   * @throws InvalidKeyException the invalid key exception
    */
   public static SecretKeys keys(String keysStr) throws InvalidKeyException {
     String[] keysArr = keysStr.split(":");
 
     if (keysArr.length != 2) {
       throw new IllegalArgumentException("Cannot parse aesKey:hmacKey");
-    }
-    else {
+    } else {
       byte[] confidentialityKey = Base64.decode(keysArr[0], BASE64_FLAGS);
       if (confidentialityKey.length != AES_KEY_LENGTH_BITS / 8) {
         throw new InvalidKeyException(
@@ -141,8 +137,8 @@ public class AesCbcWithIntegrity {
    * encountered, the return value is null.
    *
    * @return The AES & HMAC keys.
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system, or a suitable RNG is     not available
+   * @throws GeneralSecurityException if AES is not implemented on this system, or a suitable RNG is
+   * not available
    */
   public static SecretKeys generateKey() throws GeneralSecurityException {
     fixPrng();
@@ -185,13 +181,10 @@ public class AesCbcWithIntegrity {
   /**
    * A function that generates password-based AES & HMAC keys. See generateKeyFromPassword.
    *
-   * @param password
-   *     The password to derive the AES/HMAC keys from
-   * @param salt
-   *     A string version of the salt; base64 encoded.
+   * @param password The password to derive the AES/HMAC keys from
+   * @param salt A string version of the salt; base64 encoded.
    * @return The AES & HMAC keys.
-   * @throws GeneralSecurityException
-   *     the general security exception
+   * @throws GeneralSecurityException the general security exception
    */
   public static SecretKeys generateKeyFromPassword(String password, String salt)
       throws GeneralSecurityException {
@@ -203,13 +196,11 @@ public class AesCbcWithIntegrity {
    * doesn't throw them since none should be encountered. If they are
    * encountered, the return value is null.
    *
-   * @param password
-   *     The password to derive the keys from.
-   * @param salt
-   *     the salt
+   * @param password The password to derive the keys from.
+   * @param salt the salt
    * @return The AES & HMAC keys.
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system, or a suitable RNG is     not available
+   * @throws GeneralSecurityException if AES is not implemented on this system, or a suitable RNG is
+   * not available
    */
   public static SecretKeys generateKeyFromPassword(String password, byte[] salt)
       throws GeneralSecurityException {
@@ -237,12 +228,9 @@ public class AesCbcWithIntegrity {
   /**
    * Copy the elements from the start to the end
    *
-   * @param from
-   *     the source
-   * @param start
-   *     the start index to copy
-   * @param end
-   *     the end index to finish
+   * @param from the source
+   * @param start the start index to copy
+   * @param end the end index to finish
    * @return the new buffer
    */
   private static byte[] copyOfRange(byte[] from, int start, int end) {
@@ -256,8 +244,7 @@ public class AesCbcWithIntegrity {
    * Generates a random salt.
    *
    * @return The random salt suitable for generateKeyFromPassword.
-   * @throws GeneralSecurityException
-   *     the general security exception
+   * @throws GeneralSecurityException the general security exception
    */
   public static byte[] generateSalt() throws GeneralSecurityException {
     return randomBytes(PBE_SALT_LENGTH_BITS);
@@ -273,8 +260,7 @@ public class AesCbcWithIntegrity {
    * Converts the given salt into a base64 encoded string suitable for
    * storage.
    *
-   * @param salt
-   *     the salt
+   * @param salt the salt
    * @return a base 64 encoded salt string suitable to pass into generateKeyFromPassword.
    */
   public static String saltString(byte[] salt) {
@@ -285,15 +271,11 @@ public class AesCbcWithIntegrity {
    * Generates a random IV and encrypts this plain text with the given key. Then attaches
    * a hashed MAC, which is contained in the CipherTextIvMac class.
    *
-   * @param plaintext
-   *     The text that will be encrypted, which will be serialized with UTF-8
-   * @param secretKeys
-   *     The AES & HMAC keys with which to encrypt
+   * @param plaintext The text that will be encrypted, which will be serialized with UTF-8
+   * @param secretKeys The AES & HMAC keys with which to encrypt
    * @return a tuple of the IV, ciphertext, mac
-   * @throws UnsupportedEncodingException
-   *     if UTF-8 is not supported in this system
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system
+   * @throws UnsupportedEncodingException if UTF-8 is not supported in this system
+   * @throws GeneralSecurityException if AES is not implemented on this system
    */
   public static CipherTextIvMac encrypt(String plaintext, SecretKeys secretKeys)
       throws UnsupportedEncodingException, GeneralSecurityException {
@@ -304,17 +286,12 @@ public class AesCbcWithIntegrity {
    * Generates a random IV and encrypts this plain text with the given key. Then attaches
    * a hashed MAC, which is contained in the CipherTextIvMac class.
    *
-   * @param plaintext
-   *     The bytes that will be encrypted
-   * @param secretKeys
-   *     The AES & HMAC keys with which to encrypt
-   * @param encoding
-   *     the encoding
+   * @param plaintext The bytes that will be encrypted
+   * @param secretKeys The AES & HMAC keys with which to encrypt
+   * @param encoding the encoding
    * @return a tuple of the IV, ciphertext, mac
-   * @throws UnsupportedEncodingException
-   *     if the specified encoding is invalid
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system
+   * @throws UnsupportedEncodingException if the specified encoding is invalid
+   * @throws GeneralSecurityException if AES is not implemented on this system
    */
   public static CipherTextIvMac encrypt(String plaintext, SecretKeys secretKeys, String encoding)
       throws UnsupportedEncodingException, GeneralSecurityException {
@@ -325,13 +302,10 @@ public class AesCbcWithIntegrity {
    * Generates a random IV and encrypts this plain text with the given key. Then attaches
    * a hashed MAC, which is contained in the CipherTextIvMac class.
    *
-   * @param plaintext
-   *     The text that will be encrypted
-   * @param secretKeys
-   *     The combined AES & HMAC keys with which to encrypt
+   * @param plaintext The text that will be encrypted
+   * @param secretKeys The combined AES & HMAC keys with which to encrypt
    * @return a tuple of the IV, ciphertext, mac
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system
+   * @throws GeneralSecurityException if AES is not implemented on this system
    */
   public static CipherTextIvMac encrypt(byte[] plaintext, SecretKeys secretKeys)
       throws GeneralSecurityException {
@@ -362,8 +336,7 @@ public class AesCbcWithIntegrity {
    * Creates a random Initialization Vector (IV) of IV_LENGTH_BYTES.
    *
    * @return The byte array of this IV
-   * @throws GeneralSecurityException
-   *     if a suitable RNG is not available
+   * @throws GeneralSecurityException if a suitable RNG is not available
    */
   public static byte[] generateIv() throws GeneralSecurityException {
     return randomBytes(IV_LENGTH_BYTES);
@@ -372,15 +345,11 @@ public class AesCbcWithIntegrity {
   /**
    * Generate the mac based on HMAC_ALGORITHM
    *
-   * @param byteCipherText
-   *     the cipher text
-   * @param integrityKey
-   *     The key used for hmac
+   * @param byteCipherText the cipher text
+   * @param integrityKey The key used for hmac
    * @return A byte array of the HMAC for the given key & ciphertext
-   * @throws NoSuchAlgorithmException
-   *     the no such algorithm exception
-   * @throws InvalidKeyException
-   *     the invalid key exception
+   * @throws NoSuchAlgorithmException the no such algorithm exception
+   * @throws InvalidKeyException the invalid key exception
    */
   public static byte[] generateMac(byte[] byteCipherText, SecretKey integrityKey)
       throws NoSuchAlgorithmException, InvalidKeyException {
@@ -393,15 +362,11 @@ public class AesCbcWithIntegrity {
   /**
    * AES CBC decrypt.
    *
-   * @param civ
-   *     The cipher text, IV, and mac
-   * @param secretKeys
-   *     The AES & HMAC keys
+   * @param civ The cipher text, IV, and mac
+   * @param secretKeys The AES & HMAC keys
    * @return A string derived from the decrypted bytes, which are interpreted as a UTF-8 String
-   * @throws UnsupportedEncodingException
-   *     if UTF-8 is not supported
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system
+   * @throws UnsupportedEncodingException if UTF-8 is not supported
+   * @throws GeneralSecurityException if AES is not implemented on this system
    */
   public static String decryptString(CipherTextIvMac civ, SecretKeys secretKeys)
       throws UnsupportedEncodingException, GeneralSecurityException {
@@ -417,17 +382,12 @@ public class AesCbcWithIntegrity {
   /**
    * AES CBC decrypt.
    *
-   * @param civ
-   *     The cipher text, IV, and mac
-   * @param secretKeys
-   *     The AES & HMAC keys
-   * @param encoding
-   *     The string encoding to use to decode the bytes after decryption
+   * @param civ The cipher text, IV, and mac
+   * @param secretKeys The AES & HMAC keys
+   * @param encoding The string encoding to use to decode the bytes after decryption
    * @return A string derived from the decrypted bytes (not base64 encoded)
-   * @throws UnsupportedEncodingException
-   *     if the encoding is unsupported
-   * @throws GeneralSecurityException
-   *     if AES is not implemented on this system
+   * @throws UnsupportedEncodingException if the encoding is unsupported
+   * @throws GeneralSecurityException if AES is not implemented on this system
    */
   public static String decryptString(CipherTextIvMac civ, SecretKeys secretKeys, String encoding)
       throws UnsupportedEncodingException, GeneralSecurityException {
@@ -437,13 +397,10 @@ public class AesCbcWithIntegrity {
   /**
    * AES CBC decrypt.
    *
-   * @param civ
-   *     the cipher text, iv, and mac
-   * @param secretKeys
-   *     the AES & HMAC keys
+   * @param civ the cipher text, iv, and mac
+   * @param secretKeys the AES & HMAC keys
    * @return The raw decrypted bytes
-   * @throws GeneralSecurityException
-   *     if MACs don't match or AES is not implemented
+   * @throws GeneralSecurityException if MACs don't match or AES is not implemented
    */
   public static byte[] decrypt(CipherTextIvMac civ, SecretKeys secretKeys)
       throws GeneralSecurityException {
@@ -455,8 +412,7 @@ public class AesCbcWithIntegrity {
       aesCipherForDecryption.init(Cipher.DECRYPT_MODE, secretKeys.getConfidentialityKey(),
           new IvParameterSpec(civ.getIv()));
       return aesCipherForDecryption.doFinal(civ.getCipherText());
-    }
-    else {
+    } else {
       throw new GeneralSecurityException("MAC stored in civ does not match computed MAC.");
     }
   }
@@ -464,10 +420,8 @@ public class AesCbcWithIntegrity {
   /**
    * Simple constant-time equality of two byte arrays. Used for security to avoid timing attacks.
    *
-   * @param a
-   *     the a
-   * @param b
-   *     the b
+   * @param a the a
+   * @param b the b
    * @return true iff the arrays are exactly equal.
    */
   public static boolean constantTimeEq(byte[] a, byte[] b) {
@@ -492,18 +446,15 @@ public class AesCbcWithIntegrity {
     /**
      * Construct the secret keys container.
      *
-     * @param confidentialityKeyIn
-     *     The AES key
-     * @param integrityKeyIn
-     *     the HMAC key
+     * @param confidentialityKeyIn The AES key
+     * @param integrityKeyIn the HMAC key
      */
     public SecretKeys(SecretKey confidentialityKeyIn, SecretKey integrityKeyIn) {
       setConfidentialityKey(confidentialityKeyIn);
       setIntegrityKey(integrityKeyIn);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
       final int prime = 31;
       int result = 1;
       result = prime * result + confidentialityKey.hashCode();
@@ -523,8 +474,7 @@ public class AesCbcWithIntegrity {
     /**
      * Sets confidentiality key.
      *
-     * @param confidentialityKey
-     *     the confidentiality key
+     * @param confidentialityKey the confidentiality key
      */
     public void setConfidentialityKey(SecretKey confidentialityKey) {
       this.confidentialityKey = confidentialityKey;
@@ -542,8 +492,7 @@ public class AesCbcWithIntegrity {
     /**
      * Sets integrity key.
      *
-     * @param integrityKey
-     *     the integrity key
+     * @param integrityKey the integrity key
      */
     public void setIntegrityKey(SecretKey integrityKey) {
       this.integrityKey = integrityKey;
@@ -554,15 +503,13 @@ public class AesCbcWithIntegrity {
      *
      * @return base64(confidentialityKey):base64(integrityKey)
      */
-    @Override
-    public String toString() {
+    @Override public String toString() {
       return Base64.encodeToString(getConfidentialityKey().getEncoded(), BASE64_FLAGS)
           + ":"
           + Base64.encodeToString(getIntegrityKey().getEncoded(), BASE64_FLAGS);
     }
 
-    @Override
-    public boolean equals(Object obj) {
+    @Override public boolean equals(Object obj) {
       if (this == obj) {
         return true;
       }
@@ -589,12 +536,9 @@ public class AesCbcWithIntegrity {
     /**
      * Construct a new bundle of ciphertext and IV.
      *
-     * @param c
-     *     The ciphertext
-     * @param i
-     *     The IV
-     * @param h
-     *     The mac
+     * @param c The ciphertext
+     * @param i The IV
+     * @param h The mac
      */
     public CipherTextIvMac(byte[] c, byte[] i, byte[] h) {
       cipherText = new byte[c.length];
@@ -609,16 +553,15 @@ public class AesCbcWithIntegrity {
      * Constructs a new bundle of ciphertext and IV from a string of the
      * format <code>base64(iv):base64(ciphertext)</code>.
      *
-     * @param base64IvAndCiphertext
-     *     A string of the format <code>iv:ciphertext</code> The IV and     ciphertext must each be
-     *     base64-encoded.
+     * @param base64IvAndCiphertext A string of the format <code>iv:ciphertext</code> The IV and
+     * ciphertext must each be
+     * base64-encoded.
      */
     public CipherTextIvMac(String base64IvAndCiphertext) {
       String[] civArray = base64IvAndCiphertext.split(":");
       if (civArray.length != 3) {
         throw new IllegalArgumentException("Cannot parse iv:ciphertext:mac");
-      }
-      else {
+      } else {
         iv = Base64.decode(civArray[0], BASE64_FLAGS);
         mac = Base64.decode(civArray[1], BASE64_FLAGS);
         cipherText = Base64.decode(civArray[2], BASE64_FLAGS);
@@ -629,10 +572,8 @@ public class AesCbcWithIntegrity {
      * Concatinate the IV to the cipherText using array copy.
      * This is used e.g. before computing mac.
      *
-     * @param iv
-     *     The IV to prepend
-     * @param cipherText
-     *     the cipherText to append
+     * @param iv The IV to prepend
+     * @param cipherText the cipherText to append
      * @return iv :cipherText, a new byte array.
      */
     public static byte[] ivCipherConcat(byte[] iv, byte[] cipherText) {
@@ -675,16 +616,14 @@ public class AesCbcWithIntegrity {
      * @return base64(iv) : base64(mac) : base64(ciphertext).
      * The iv and mac go first because they're fixed length.
      */
-    @Override
-    public String toString() {
+    @Override public String toString() {
       String ivString = Base64.encodeToString(iv, BASE64_FLAGS);
       String cipherTextString = Base64.encodeToString(cipherText, BASE64_FLAGS);
       String macString = Base64.encodeToString(mac, BASE64_FLAGS);
       return ivString + ":" + macString + ":" + cipherTextString;
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
       final int prime = 31;
       int result = 1;
       result = prime * result + Arrays.hashCode(cipherText);
@@ -693,8 +632,7 @@ public class AesCbcWithIntegrity {
       return result;
     }
 
-    @Override
-    public boolean equals(Object obj) {
+    @Override public boolean equals(Object obj) {
       if (this == obj) {
         return true;
       }
@@ -746,8 +684,7 @@ public class AesCbcWithIntegrity {
     /**
      * Applies all fixes.
      *
-     * @throws SecurityException
-     *     if a fix is needed but could not be applied.
+     * @throws SecurityException if a fix is needed but could not be applied.
      */
     public static void apply() {
       applyOpenSSLFix();
@@ -758,9 +695,8 @@ public class AesCbcWithIntegrity {
      * Applies the fix for OpenSSL PRNG having low entropy. Does nothing if
      * the fix is not needed.
      *
-     * @throws SecurityException
-     *     if the fix is needed but could not be
-     *     applied.
+     * @throws SecurityException if the fix is needed but could not be
+     * applied.
      */
     private static void applyOpenSSLFix() throws SecurityException {
       if ((Build.VERSION.SDK_INT < VERSION_CODE_JELLY_BEAN) || (Build.VERSION.SDK_INT
@@ -786,8 +722,7 @@ public class AesCbcWithIntegrity {
       } catch (Exception e) {
         if (ALLOW_BROKEN_PRNG) {
           Log.w(PrngFixes.class.getSimpleName(), "Failed to seed OpenSSL PRNG", e);
-        }
-        else {
+        } else {
           throw new SecurityException("Failed to seed OpenSSL PRNG", e);
         }
       }
@@ -798,9 +733,8 @@ public class AesCbcWithIntegrity {
      * the default. Does nothing if the implementation is already the
      * default or if there is not need to install the implementation.
      *
-     * @throws SecurityException
-     *     if the fix is needed but could not be
-     *     applied.
+     * @throws SecurityException if the fix is needed but could not be
+     * applied.
      */
     private static void installLinuxPRNGSecureRandom() throws SecurityException {
       if (Build.VERSION.SDK_INT > VERSION_CODE_JELLY_BEAN_MR2) {
@@ -838,8 +772,7 @@ public class AesCbcWithIntegrity {
             Log.w(PrngFixes.class.getSimpleName(),
                 "new SecureRandom() backed by wrong Provider: " + rng1.getProvider().getClass());
             return;
-          }
-          else {
+          } else {
             throw new SecurityException(
                 "new SecureRandom() backed by wrong Provider: " + rng1.getProvider().getClass());
           }
@@ -852,8 +785,7 @@ public class AesCbcWithIntegrity {
           if (ALLOW_BROKEN_PRNG) {
             Log.w(PrngFixes.class.getSimpleName(), "SHA1PRNG not available", e);
             return;
-          }
-          else {
+          } else {
             throw new SecurityException("SHA1PRNG not available", e);
           }
         }
@@ -866,8 +798,7 @@ public class AesCbcWithIntegrity {
                 "SecureRandom.getInstance(\"SHA1PRNG\") backed by wrong"
                     + " Provider: "
                     + rng2.getProvider().getClass());
-          }
-          else {
+          } else {
             throw new SecurityException("SecureRandom.getInstance(\"SHA1PRNG\") backed by wrong"
                 + " Provider: "
                 + rng2.getProvider().getClass());
@@ -994,8 +925,7 @@ public class AesCbcWithIntegrity {
        */
       private boolean mSeeded;
 
-      @Override
-      protected void engineSetSeed(byte[] bytes) {
+      @Override protected void engineSetSeed(byte[] bytes) {
         try {
           OutputStream out;
           synchronized (sLock) {
@@ -1012,8 +942,7 @@ public class AesCbcWithIntegrity {
         }
       }
 
-      @Override
-      protected void engineNextBytes(byte[] bytes) {
+      @Override protected void engineNextBytes(byte[] bytes) {
         if (!mSeeded) {
           // Mix in the device- and invocation-specific seed.
           engineSetSeed(generateSeed());
@@ -1032,8 +961,7 @@ public class AesCbcWithIntegrity {
         }
       }
 
-      @Override
-      protected byte[] engineGenerateSeed(int size) {
+      @Override protected byte[] engineGenerateSeed(int size) {
         byte[] seed = new byte[size];
         engineNextBytes(seed);
         return seed;

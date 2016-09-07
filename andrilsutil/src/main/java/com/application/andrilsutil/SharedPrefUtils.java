@@ -19,12 +19,9 @@ public class SharedPrefUtils {
   /**
    * Save data.
    *
-   * @param context
-   *     the context
-   * @param key
-   *     the key
-   * @param val
-   *     the val
+   * @param context the context
+   * @param key the key
+   * @param val the val
    */
   // Save Data
   static public void saveData(Context context, String key, String val) {
@@ -34,12 +31,9 @@ public class SharedPrefUtils {
   /**
    * Save data.
    *
-   * @param context
-   *     the context
-   * @param key
-   *     the key
-   * @param val
-   *     the val
+   * @param context the context
+   * @param key the key
+   * @param val the val
    */
   static public void saveData(Context context, String key, int val) {
     context.getSharedPreferences(PREF_APP, Context.MODE_PRIVATE).edit().putInt(key, val).apply();
@@ -48,12 +42,9 @@ public class SharedPrefUtils {
   /**
    * Save data.
    *
-   * @param context
-   *     the context
-   * @param key
-   *     the key
-   * @param val
-   *     the val
+   * @param context the context
+   * @param key the key
+   * @param val the val
    */
   static public void saveData(Context context, String key, boolean val) {
     context.getSharedPreferences(PREF_APP, Context.MODE_PRIVATE)
@@ -65,10 +56,8 @@ public class SharedPrefUtils {
   /**
    * Gets string data.
    *
-   * @param context
-   *     the context
-   * @param key
-   *     the key
+   * @param context the context
+   * @param key the key
    * @return the string data
    */
   // Get Data
@@ -79,10 +68,8 @@ public class SharedPrefUtils {
   /**
    * Gets int data.
    *
-   * @param context
-   *     the context
-   * @param key
-   *     the key
+   * @param context the context
+   * @param key the key
    * @return the int data
    */
   static public int getIntData(Context context, String key) {
@@ -92,10 +79,8 @@ public class SharedPrefUtils {
   /**
    * Gets boolean data.
    *
-   * @param context
-   *     the context
-   * @param key
-   *     the key
+   * @param context the context
+   * @param key the key
    * @return the boolean data
    */
   static public boolean getBooleanData(Context context, String key) {
