@@ -1,18 +1,14 @@
 package com.yelinaung.luluaung.component;
 
-import android.content.Context;
-import com.yelinaung.luluaung.UseCases.GetItems;
-import com.yelinaung.luluaung.UseCases.GetItems_Factory;
-import com.yelinaung.luluaung.UseCases.ItemCases;
 import com.yelinaung.luluaung.module.DataModule;
 import com.yelinaung.luluaung.module.DataModule_ProvideGetUserListUseCaseFactory;
+import com.yelinaung.luluaung.repo.CacheRepo;
 import com.yelinaung.luluaung.repo.DataRepository;
-import com.yelinaung.luluaung.repo.DataRepository_Factory;
-import com.yelinaung.luluaung.repo.DataRepository_MembersInjector;
-import com.yelinaung.luluaung.repo.RemoteDataRepository;
-import com.yelinaung.luluaung.repo.RemoteDataRepository_Factory;
 import com.yelinaung.luluaung.threads.PostExecutionThread;
 import com.yelinaung.luluaung.threads.ThreadExecutor;
+import com.yelinaung.luluaung.useCases.GetItems;
+import com.yelinaung.luluaung.useCases.GetItems_Factory;
+import com.yelinaung.luluaung.useCases.ItemCases;
 import com.yelinaung.luluaung.views.activities.MainActivity;
 import com.yelinaung.luluaung.views.activities.MainActivity_MembersInjector;
 import com.yelinaung.luluaung.views.presenters.MainPresenter;
@@ -24,7 +20,6 @@ import dagger.internal.Preconditions;
 import dagger.internal.ScopedProvider;
 import javax.annotation.Generated;
 import javax.inject.Provider;
-import retrofit2.Retrofit;
 
 @Generated(
   value = "dagger.internal.codegen.ComponentProcessor",
@@ -35,19 +30,13 @@ public final class DaggerDataComponent implements DataComponent {
 
   private Provider<PostExecutionThread> uiThreadProvider;
 
-  private Provider<Retrofit> retrofitProvider;
-
-  private Provider<Context> contextProvider;
-
-  private Provider<RemoteDataRepository> remoteDataRepositoryProvider;
-
-  private MembersInjector<DataRepository> dataRepositoryMembersInjector;
-
-  private Provider<DataRepository> dataRepositoryProvider;
+  private Provider<DataRepository> dataRepoProvider;
 
   private Provider<GetItems> getItemsProvider;
 
   private Provider<ItemCases> provideGetUserListUseCaseProvider;
+
+  private Provider<CacheRepo> cacheProvider;
 
   private Provider<MainPresenter> mainPresenterProvider;
 
@@ -89,55 +78,48 @@ public final class DaggerDataComponent implements DataComponent {
           }
         };
 
-    this.retrofitProvider =
-        new Factory<Retrofit>() {
+    this.dataRepoProvider =
+        new Factory<DataRepository>() {
           private final ApplicationComponent applicationComponent = builder.applicationComponent;
 
           @Override
-          public Retrofit get() {
+          public DataRepository get() {
             return Preconditions.checkNotNull(
-                applicationComponent.retrofit(),
+                applicationComponent.dataRepo(),
                 "Cannot return null from a non-@Nullable component method");
           }
         };
-
-    this.contextProvider =
-        new Factory<Context>() {
-          private final ApplicationComponent applicationComponent = builder.applicationComponent;
-
-          @Override
-          public Context get() {
-            return Preconditions.checkNotNull(
-                applicationComponent.context(),
-                "Cannot return null from a non-@Nullable component method");
-          }
-        };
-
-    this.remoteDataRepositoryProvider =
-        RemoteDataRepository_Factory.create(retrofitProvider, contextProvider);
-
-    this.dataRepositoryMembersInjector =
-        DataRepository_MembersInjector.create(remoteDataRepositoryProvider);
-
-    this.dataRepositoryProvider = DataRepository_Factory.create(dataRepositoryMembersInjector);
 
     this.getItemsProvider =
         GetItems_Factory.create(
             MembersInjectors.<GetItems>noOp(),
             exeThreadProvider,
             uiThreadProvider,
-            dataRepositoryProvider);
+            dataRepoProvider);
 
     this.provideGetUserListUseCaseProvider =
         ScopedProvider.create(
             DataModule_ProvideGetUserListUseCaseFactory.create(
                 builder.dataModule, getItemsProvider));
 
+    this.cacheProvider =
+        new Factory<CacheRepo>() {
+          private final ApplicationComponent applicationComponent = builder.applicationComponent;
+
+          @Override
+          public CacheRepo get() {
+            return Preconditions.checkNotNull(
+                applicationComponent.cache(),
+                "Cannot return null from a non-@Nullable component method");
+          }
+        };
+
     this.mainPresenterProvider =
-        ScopedProvider.create(MainPresenter_Factory.create(provideGetUserListUseCaseProvider));
+        ScopedProvider.create(
+            MainPresenter_Factory.create(provideGetUserListUseCaseProvider, cacheProvider));
 
     this.mainActivityMembersInjector =
-        MainActivity_MembersInjector.create(mainPresenterProvider, dataRepositoryProvider);
+        MainActivity_MembersInjector.create(mainPresenterProvider, dataRepoProvider);
   }
 
   @Override

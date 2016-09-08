@@ -2,6 +2,9 @@ package com.yelinaung.luluaung.component
 
 import android.content.Context
 import com.yelinaung.luluaung.module.ApplicationModule
+import com.yelinaung.luluaung.repo.CacheRepo
+
+import com.yelinaung.luluaung.repo.DataRepository
 import com.yelinaung.luluaung.threads.PostExecutionThread
 import com.yelinaung.luluaung.threads.ThreadExecutor
 import dagger.Component
@@ -19,4 +22,6 @@ interface ApplicationComponent {
     fun retrofit(): Retrofit
     fun exeThread(): ThreadExecutor
     fun uiThread(): PostExecutionThread
+    fun dataRepo(): DataRepository
+    fun cache():CacheRepo
 }

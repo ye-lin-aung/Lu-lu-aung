@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="no_intent_handler"> Sorry we cannot perform this action</string>
-	<string name="app_name">luluaung</string>
+	<string name="app_name">Lu2Ag</string>
 	<string name="welcome_text">Welcome from andrils</string>
 </resources>

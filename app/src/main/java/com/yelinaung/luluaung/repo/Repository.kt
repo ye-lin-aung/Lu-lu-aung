@@ -10,5 +10,5 @@ import rx.Observable
 
 interface Repository {
     fun getData(): Observable<Item>
-    fun getDataByPages(page:String): Observable<Item>
+    fun getDataByPages(page: String): Observable<Item>
 }

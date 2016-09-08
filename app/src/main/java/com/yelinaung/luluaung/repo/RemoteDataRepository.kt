@@ -1,7 +1,6 @@
 package com.yelinaung.luluaung.repo
 
 import android.content.Context
-import android.util.Log
 import com.yelinaung.luluaung.model.network.Datum
 import com.yelinaung.luluaung.model.network.Item
 import com.yelinaung.luluaung.model.network.createMap
@@ -32,13 +31,12 @@ class RemoteDataRepository : Repository, CustomCallback {
 
     override fun getDataByPages(page: String): Observable<Item> {
         val call = retrofit.create(ApiClient::class.java).getItem(createMap(), page)
-        val call2 = retrofit.create(ApiClient::class.java).getDebug(createMap(), page)
-        Log.d("DATA", call2.request().toString());
+//        val call2 = retrofit.create(ApiClient::class.java).getDebug(createMap(), page)
+        //Log.d("DATA", call2.request().toString());
         return call.asObservable()
     }
 
     override fun getData(): Observable<Item> {
-
         throw UnsupportedOperationException("No need")
     }
 

@@ -1,8 +1,10 @@
 package com.yelinaung.luluaung.views.presenters
 
-import com.yelinaung.luluaung.UseCases.ItemCases
+import android.util.Log
 import com.yelinaung.luluaung.model.network.Item
+import com.yelinaung.luluaung.repo.CacheRepo
 import com.yelinaung.luluaung.scope.RepoScope
+import com.yelinaung.luluaung.useCases.ItemCases
 import com.yelinaung.luluaung.views.views.MainView
 import rx.Subscriber
 import javax.inject.Inject
@@ -15,15 +17,18 @@ import javax.inject.Named
 
 @RepoScope class MainPresenter : MainPresenterImpl {
 
-    var list: MutableList<String> = mutableListOf();
+
     lateinit var useCase: ItemCases
-    lateinit var view: MainView;
+    lateinit var cache: CacheRepo
+    lateinit var view: MainView
     var loading = false
+    lateinit var page: String;
 
 
-    @Inject constructor(@Named("itemList") useCase: ItemCases) {
+    @Inject constructor(@Named("itemList") useCase: ItemCases, cache: CacheRepo) {
         this.useCase = useCase
-        list.add("MTA4OTgzODc4Nzc2NDQ0MwZDZD")
+        this.cache = cache
+        page = cache.getPage() + ""
     }
 
 
@@ -38,43 +43,49 @@ import javax.inject.Named
 
     override fun pause() {
         useCase.removesubscribe()
+
     }
 
     override fun resume() {
-        if (!loading) {
-            loading = true
-            useCase.execute(ItemSubscriber(), list.last())
-        }
-        useCase.getCached(ItemSubscriber())
+        view.renderItemList(cache.getItems())
+        useCase.execute(ItemSubscriber(), page)
         view.showProgress()
+        view.hideNoData()
         view.hideitems()
     }
 
     fun paginate() {
+
         if (!loading) {
             loading = true
-            useCase.execute(ItemSubscriber(), list.last())
+            useCase.execute(ItemSubscriber(), page)
         }
-        
     }
 
     private inner class ItemSubscriber : Subscriber<Item>() {
         override fun onCompleted() {
+
+            view.renderItemList(cache.getItems())
+            view.processViews()
             loading = false
         }
 
         override fun onError(e: Throwable?) {
             e!!.printStackTrace()
+            onCompleted()
         }
 
         override fun onNext(t: Item?) {
-            if (t!!.data.distinct().count() > 0) {
+
+            if (t!!.data.count() > 0) {
                 view.hideProgress()
                 view.showitems()
-                list.add(t.paging!!.cursors!!.after.toString())
-                this@MainPresenter.view.renderItemList(t.data.distinct())
+                page = cache.getPage()
+                this@MainPresenter.cache.addItem(t.paging!!.cursors!!.after.toString(), t)
             }
+            Log.d("COMPLETED", "COMPLETED")
             onCompleted()
+
         }
     }
 

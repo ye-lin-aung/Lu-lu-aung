@@ -4,12 +4,12 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_btn_check_material.xml"
     },
     {
-        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
-        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_ic_clear_material.xml"
-    },
-    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_ic_clear_material.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
@@ -40,8 +40,16 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/drawable/design_fab_background.xml"
     },
     {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/ic_wallpaper_24dp.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/drawable/ic_wallpaper_24dp.xml"
+    },
+    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/ic_connection_24dp.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/drawable/ic_connection_24dp.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",

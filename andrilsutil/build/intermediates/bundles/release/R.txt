@@ -1,2 +1,0 @@
-int string app_name 0x7f020000
-int string no_intent_handler 0x7f020001

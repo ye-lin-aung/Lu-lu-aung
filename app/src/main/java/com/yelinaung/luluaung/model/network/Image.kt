@@ -2,12 +2,13 @@ package com.yelinaung.luluaung.model.network
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 /**
  * Created by user on 9/3/16.
  */
 
-class Image {
+class Image :Serializable{
     /**
 
      * @return

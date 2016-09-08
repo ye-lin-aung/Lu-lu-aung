@@ -2,13 +2,14 @@ package com.yelinaung.luluaung.model.network
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 import java.util.*
 
 /**
  * Created by user on 9/3/16.
  */
 
-class Datum {
+class Datum : Serializable {
 
 
     /**

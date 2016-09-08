@@ -3,19 +3,226 @@
 
     <item
         is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
-        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_8bd2bdfac339b74e5a4fea613dfd7462ee6214b2/classes.dex" />
+        revision="24.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_0dc6ee1f31966c8f48b005600cbfae2516d82067/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_542ab245a15d276b8398778d4a0d9552b86059cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_940c7bba72db32ad4ba81fc68aadf3d4d5ad3296/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_9791e35b781a863e4313b8cd23c328a10d911055/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_45634fa18e4f84cd33b08d15a324ef2f3f1ffc11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.0_0832c2b1302ec7ab7a3469760e89034056bb189c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_beb33387502b7655de1624b4e1778303ceb99782/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_d30d68eca6ccef56563b8b5cb8ea21e1553f4c91/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8885183bc5574c08cbd95d4c55c7d705d23eef1d">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22910a476e3b42322fa0199bc117450c504eaa8c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/javax.inject-1_f97537e058751e1bc1dcae4b328f0c9bec9b3896/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.google.dagger/dagger/2.1/73ce0d997524a7fd3b06cfc7adbb9e9ef4854754/dagger-2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="73ce0d997524a7fd3b06cfc7adbb9e9ef4854754">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/dagger-2.1_2bb7f4c825d30ed7e707a7f0ac2f4b75cb2b760e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_0f889b9ddbc0d1bc7045ea516cdb57fc15badd7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_fbce1fcb94209d2116f7d755c21c41b259ef4614/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_4f54ff1dba5d73637bd42b81e962991cce8ee774/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9760f0788382b66eb57155a5977bfbeeca0e31cf">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5199f410a46871b80a3fef162ccb2208bad65181/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.0_9db0b54cd0ce876259d3db91a15789936fb42f1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.0_04180a6a8bd58802228dbb9ff1e12a0be9576581/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.0_6ef16a2c562d3053b67e7c749938d88c264f4604/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_633adadaf53e2734918f6cdac0575d4103dcbdd0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.0_aeb2315e10d394bb61b51fb9e04405e0add027cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_7734d82c85e59f39662000a2b84879456ae7c024/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_c98c1c934bd4e07517d94f7b4d7430fb4a23a988/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_eac6915bf0764b24dd60ef414e4ec8f51feed7e6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_c179d4c83012d19f6d55da6f626084d38946c1a0/classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.2"
         sha1="5a2386ad9bfff580b206a7fe305cdccd00798159">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.2.1_4ef41fa97656923da2cf006b61d0eb00559cf4f8/classes.dex" />
     </item>
@@ -24,52 +231,52 @@
         jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.6/2586312cd2b8a511e4c6236736f5a039fc0f2273/rxjava-1.1.6.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.2"
         sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.6_8fd1a478acad2a529d4e3179a77268f24ae36a61/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_7734d82c85e59f39662000a2b84879456ae7c024/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.0_aeb2315e10d394bb61b51fb9e04405e0add027cb/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_eac6915bf0764b24dd60ef414e4ec8f51feed7e6/classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.0.2/a60c039ba54c73d1133b72178e1b04133c73d13d/adapter-rxjava-2.0.2.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.2"
         sha1="a60c039ba54c73d1133b72178e1b04133c73d13d">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.0.2_7673abc496241f70143ec53c05b4c99cf30dd327/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_8bd2bdfac339b74e5a4fea613dfd7462ee6214b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_8b03c3bcf237460a7fa8a36aab4f7f045d438e14/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-runtime/1.0.3/10f40d016700cf4287e49fa1d51c2a8507e9b946/kotlin-runtime-1.0.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="10f40d016700cf4287e49fa1d51c2a8507e9b946">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/kotlin-runtime-1.0.3_6d358032de9866c15239fa9440e824ea71f6392a/classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.0.3/20738122b53399036c321eeb84687367757d622a/kotlin-stdlib-1.0.3.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.2"
         sha1="20738122b53399036c321eeb84687367757d622a">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/kotlin-stdlib-1.0.3_cd076170356dcb73a2057281328e327bd1fa0c29/classes.dex" />
     </item>
@@ -78,270 +285,18 @@
         jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.2"
         sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_2d6c788bf2708f3ef43dd1d61dbc45199de2e51b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.databinding/library/1.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.databinding-library-1.2.1_b0759816559d63681948830540e9b80c07f8514f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-runtime/1.0.3/10f40d016700cf4287e49fa1d51c2a8507e9b946/kotlin-runtime-1.0.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="10f40d016700cf4287e49fa1d51c2a8507e9b946">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/kotlin-runtime-1.0.3_6d358032de9866c15239fa9440e824ea71f6392a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.mcxiaoke.koi/core/0.5.3/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="6421eaf87a013b79265aca5db5a0d7ab49c29550">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.mcxiaoke.koi-core-0.5.3_06fe12235eca591796e8d65e584c98d1b72b01d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_beb33387502b7655de1624b4e1778303ceb99782/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_9330c48b270baf85a4c709fa2485c5dac4da11f2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_4f54ff1dba5d73637bd42b81e962991cce8ee774/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_8b03c3bcf237460a7fa8a36aab4f7f045d438e14/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.0_542ab245a15d276b8398778d4a0d9552b86059cd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.0_0832c2b1302ec7ab7a3469760e89034056bb189c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.0_9db0b54cd0ce876259d3db91a15789936fb42f1c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_c98c1c934bd4e07517d94f7b4d7430fb4a23a988/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_0f889b9ddbc0d1bc7045ea516cdb57fc15badd7b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.0_6ef16a2c562d3053b67e7c749938d88c264f4604/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_c179d4c83012d19f6d55da6f626084d38946c1a0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="1bafb561f8131d4a0953a4ea42852d770969d2c8">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5199f410a46871b80a3fef162ccb2208bad65181/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_fbce1fcb94209d2116f7d755c21c41b259ef4614/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f6072a49865fd95039aa0571cec17758387443f3">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22910a476e3b42322fa0199bc117450c504eaa8c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.databinding/adapters/1.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.databinding-adapters-1.2.1_361a1833b1402c19fa24ecdc3ab98a86935009ec/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.google.dagger/dagger/2.1/73ce0d997524a7fd3b06cfc7adbb9e9ef4854754/dagger-2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="73ce0d997524a7fd3b06cfc7adbb9e9ef4854754">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/dagger-2.1_2bb7f4c825d30ed7e707a7f0ac2f4b75cb2b760e/classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.1"
+        revision="24.0.2"
         sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.0_10297d87005009375222dceab3350e2ad0f86bb1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_45634fa18e4f84cd33b08d15a324ef2f3f1ffc11/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/m2repository/com/android/databinding/baseLibrary/2.2.0-rc1/baseLibrary-2.2.0-rc1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d821816fcc1b0280e73800fec237fbd7f8aca4c7">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/baseLibrary-2.2.0-rc1_1f4c3b69af3789cbe443eb46561f6b931a11e1a5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_633adadaf53e2734918f6cdac0575d4103dcbdd0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_9791e35b781a863e4313b8cd23c328a10d911055/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_0dc6ee1f31966c8f48b005600cbfae2516d82067/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_d30d68eca6ccef56563b8b5cb8ea21e1553f4c91/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.0_04180a6a8bd58802228dbb9ff1e12a0be9576581/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_940c7bba72db32ad4ba81fc68aadf3d4d5ad3296/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Applications/Android Studio beta.app/Contents/gradle/wrapper/dists/gradle-2.4-all/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/javax.inject-1_f97537e058751e1bc1dcae4b328f0c9bec9b3896/classes.dex" />
     </item>
 
 </items>

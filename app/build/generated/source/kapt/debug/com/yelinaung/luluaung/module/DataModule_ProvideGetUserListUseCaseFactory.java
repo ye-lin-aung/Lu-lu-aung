@@ -1,7 +1,7 @@
 package com.yelinaung.luluaung.module;
 
-import com.yelinaung.luluaung.UseCases.GetItems;
-import com.yelinaung.luluaung.UseCases.ItemCases;
+import com.yelinaung.luluaung.useCases.GetItems;
+import com.yelinaung.luluaung.useCases.ItemCases;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;
 import javax.annotation.Generated;

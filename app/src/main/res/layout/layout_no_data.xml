@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="@dimen/no_data_size"
+		android:layout_height="@dimen/no_data_size"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:orientation="vertical">
+
+	<ImageView
+			android:layout_width="@dimen/wifi_image_size"
+			android:layout_height="@dimen/wifi_image_size"
+			android:tint="@color/jet_black"
+			app:srcCompat="@drawable/ic_connection_24dp"/>
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:lineSpacingMultiplier="1.2"
+			android:textSize="@dimen/no_data_text_size"
+			android:textColor="@android:color/black"
+			android:padding="@dimen/text_padding"
+			android:tint="@color/jet_black"
+			android:text="@string/no_data"
+			android:layout_marginBottom="@dimen/text_margin_bottom"/>
+
+
+</LinearLayout>

@@ -6,9 +6,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
+
 import com.yelinaung.luluaung.R
 import com.yelinaung.luluaung.adapters.viewholders.ImageViewHolder
 import com.yelinaung.luluaung.adapters.viewholders.ProgressViewHolder
+import com.yelinaung.luluaung.event.ViewClick
 import com.yelinaung.luluaung.model.network.Datum
 import java.util.*
 
@@ -24,6 +26,7 @@ class ImageRecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     val ITEM = 0
     var map: HashMap<String, Datum> = hashMapOf()
     var list: MutableList<Datum> = mutableListOf()
+    var click: ViewClick? = null
 
     fun replaceList(list: List<Datum>) {
         list.forEach { v1 ->
@@ -32,9 +35,11 @@ class ImageRecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             }
         }
         this.list = map.values.toMutableList()
-
         notifyDataSetChanged()
+    }
 
+    fun getItemAtPosition(position: Int): Datum {
+        return list.get(position)
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -47,7 +52,8 @@ class ImageRecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         if (holder is ImageViewHolder) {
-            Glide.with(context).load(this.list.get(position).images.get(0).source).crossFade().placeholder(R.drawable.icon).into(((holder) as ImageViewHolder).img)
+            Glide.with(context).load(this.list.get(position).images.get(0).source).crossFade().placeholder(R.drawable.icon).into(((holder)).img)
+            holder.itemView.setOnClickListener() { v -> click!!.click(position, holder.itemView) }
         }
     }
 
@@ -55,6 +61,7 @@ class ImageRecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         context = parent!!.context
         if (viewType == ITEM) {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.item_image_recycler, parent, false)
+
             return ImageViewHolder(view);
         } else {
             val view = LayoutInflater.from(parent.context).inflate(R.layout.item_progress, parent, false)

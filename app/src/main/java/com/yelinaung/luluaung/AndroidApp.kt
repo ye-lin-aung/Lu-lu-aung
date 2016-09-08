@@ -13,7 +13,6 @@ import com.yelinaung.luluaung.module.ApplicationModule
 class AndroidApp : Application() {
 
 
-
     lateinit var applicationComponent: ApplicationComponent
 
     lateinit var repoComponent: RemoteComponent

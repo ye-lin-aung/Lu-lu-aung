@@ -8,8 +8,16 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/layout_no_data.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/layout/layout_no_data.xml"
+    },
+    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/content_detail.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/layout/content_detail.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
@@ -48,12 +56,12 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/design/24.2.0/res/layout/design_navigation_item_header.xml"
     },
     {
-        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
-        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_screen_content_include.xml"
-    },
-    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
@@ -150,6 +158,10 @@
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/activity_detail.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/layout/activity_detail.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",

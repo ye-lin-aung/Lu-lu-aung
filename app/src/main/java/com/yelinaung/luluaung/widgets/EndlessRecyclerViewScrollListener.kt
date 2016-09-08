@@ -7,12 +7,12 @@ import android.support.v7.widget.RecyclerView
  * Created by user on 9/8/16.
  */
 
-abstract class EndlessRecyclerViewScrollListener(private val gridLayoutManager: GridLayoutManager) : RecyclerView.OnScrollListener() {
+abstract class EndlessRecyclerViewScrollListener(private val gridLayoutManager: GridLayoutManager, var item: Int) : RecyclerView.OnScrollListener() {
     // The minimum amount of items to have below your current scroll position
 
     private var previousTotal = 0 // The total number of items in the dataset after the last load
     private var loading = true // True if we are still waiting for the last set of data to load.
-    private var visibleThreshold = 20
+    private var visibleThreshold = item
 
     // The minimum amount of items to have below your current scroll position before loading more.
     internal var firstVisibleItem: Int = 0
@@ -25,24 +25,33 @@ abstract class EndlessRecyclerViewScrollListener(private val gridLayoutManager: 
 
     override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
         super.onScrolled(recyclerView, dx, dy)
+        val currentFirstVisible = gridLayoutManager.findFirstVisibleItemPosition()
 
-        visibleItemCount = recyclerView!!.childCount
-        totalItemCount = gridLayoutManager.itemCount
-        firstVisibleItem = gridLayoutManager.findFirstVisibleItemPosition()
+        if (currentFirstVisible > currentFirstVisible) {
 
-        if (loading) {
-            if (totalItemCount > previousTotal) {
-                loading = false
-                previousTotal = totalItemCount
+
+        } else {
+
+
+            visibleItemCount = recyclerView!!.childCount
+            totalItemCount = gridLayoutManager.itemCount
+            firstVisibleItem = gridLayoutManager.findFirstVisibleItemPosition()
+
+            if (loading) {
+
+                if (totalItemCount > previousTotal) {
+                    loading = false
+                    previousTotal = totalItemCount
+                }
             }
-        }
-        if (!loading && totalItemCount - visibleItemCount <= firstVisibleItem + visibleThreshold) {
-            // End has been reached
+            if (!loading && totalItemCount - visibleItemCount <= firstVisibleItem + visibleThreshold) {
+                // End has been reached
 
-            // Do something
+                // Do something
 
-            onLoadMore()
-            //loading = true;
+                onLoadMore()
+                //loading = true;
+            }
         }
     }
 

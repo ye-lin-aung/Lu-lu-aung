@@ -3,6 +3,7 @@ package com.yelinaung.luluaung.module
 import android.app.Application
 import android.content.Context
 import com.yelinaung.luluaung.BuildConfig
+import com.yelinaung.luluaung.repo.*
 import com.yelinaung.luluaung.threads.JobExecutor
 import com.yelinaung.luluaung.threads.PostExecutionThread
 import com.yelinaung.luluaung.threads.ThreadExecutor
@@ -26,8 +27,13 @@ class ApplicationModule(val application: Application) {
 
     @Singleton @Provides fun threadExecutor(jobExecutor: JobExecutor): ThreadExecutor = jobExecutor
 
-    @Singleton @Provides fun mainThread(uiThread: UIThread):PostExecutionThread = uiThread
+    @Singleton @Provides fun mainThread(uiThread: UIThread): PostExecutionThread = uiThread
 
+    @Singleton @Provides fun remote(dataRepository: RemoteDataRepository): Repository = dataRepository
+
+    @Singleton @Provides fun dataRepo(dataRepository: DataRepository): Repository = dataRepository
+
+    @Singleton @Provides fun provideCache(cacheRepo: CacheRepo): Repo = cacheRepo
 
     @Provides @Singleton
     fun retrofit(): Retrofit {

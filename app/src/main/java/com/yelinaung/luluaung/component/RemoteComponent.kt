@@ -1,6 +1,5 @@
 package com.yelinaung.luluaung.component
 
-import android.content.SharedPreferences
 import com.yelinaung.luluaung.module.RemoteModule
 import com.yelinaung.luluaung.scope.RepoScope
 import dagger.Component

@@ -1,4 +1,4 @@
-package com.yelinaung.luluaung.UseCases
+package com.yelinaung.luluaung.useCases
 
 import com.yelinaung.luluaung.model.network.Item
 import com.yelinaung.luluaung.threads.PostExecutionThread
@@ -30,9 +30,7 @@ abstract class ItemCases {
         this.subscription = buildObservable(page).subscribeOn(Schedulers.from(threadExecutor)).observeOn(postExecutionThread.scheduler).subscribe(subscriber)
     }
 
-    fun getCached(subscriber: Subscriber<Item>) {
-        this.subscription = buildCache().subscribeOn(Schedulers.from(threadExecutor)).observeOn(postExecutionThread.scheduler).subscribe(subscriber)
-    }
+
 
     fun removesubscribe() {
         if (!subscription.isUnsubscribed) {

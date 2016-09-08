@@ -1,4 +1,4 @@
-package com.yelinaung.luluaung.UseCases
+package com.yelinaung.luluaung.useCases
 
 import android.util.Log
 import com.yelinaung.luluaung.model.network.Item
@@ -21,14 +21,12 @@ class GetItems : ItemCases {
     }
 
 
-
-
-    override fun buildObservable(page:String): Observable<Item> {
+    override fun buildObservable(page: String): Observable<Item> {
         return this.dataRepository.getDataByPages(page)
     }
 
     override fun buildCache(): Observable<Item> {
-        Log.d("ASLKDJLA","ASDA");
+
         return this.dataRepository.cacheData()
     }
 

@@ -1,4 +1,4 @@
-package com.yelinaung.luluaung.UseCases;
+package com.yelinaung.luluaung.useCases;
 
 import com.yelinaung.luluaung.repo.DataRepository;
 import com.yelinaung.luluaung.threads.PostExecutionThread;

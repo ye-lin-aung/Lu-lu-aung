@@ -11,8 +11,11 @@ interface MainView : View {
 
     fun showProgress()
     fun hideProgress()
-
+    fun processViews()
     fun showitems()
+    fun hideNoData()
+    fun showNoData()
     fun hideitems()
+    fun onError()
 
 }
