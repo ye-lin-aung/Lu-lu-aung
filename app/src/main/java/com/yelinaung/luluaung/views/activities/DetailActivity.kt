@@ -20,6 +20,7 @@ import com.yelinaung.luluaung.util.setFullScreen
 import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.content_detail.*
 import kotlinx.android.synthetic.main.content_detail.view.*
+import uk.co.senab.photoview.PhotoViewAttacher
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -44,17 +45,24 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
         setFullScreen(this)
+
+
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view -> Snackbar.make(view, "W8 its still loading", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
         val datum = intent.getSerializableExtra(DETAIL_PARCEL) as Datum
+        if (datum.name != null ) {
+            name.text = datum.name
+        }
         val bitmap = Glide.with(this).load(datum.images.get(0).source).asBitmap()
         bitmap.into(object : SimpleTarget<Bitmap>() {
             override fun onResourceReady(resource: Bitmap?, glideAnimation: GlideAnimation<in Bitmap>?) {
                 loaded_bitmap = resource!!
+                val attacher: PhotoViewAttacher = PhotoViewAttacher(content_detail.detail_image)
                 if (loaded_bitmap != null) {
                     content_detail.detail_image.setImageBitmap(loaded_bitmap)
                     fab.setOnLongClickListener { v ->
                         DownTask().execute()
+                        attacher.update()
                         true
                     }
                     fab.setOnClickListener { v ->
@@ -66,7 +74,6 @@ class DetailActivity : AppCompatActivity() {
                             e.printStackTrace()
                             Snackbar.make(layout, "Error Occured please try again later", Snackbar.LENGTH_LONG).setAction("Action", null).show()
                         }
-
                     }
 
                 }

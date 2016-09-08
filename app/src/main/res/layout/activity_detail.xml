@@ -9,6 +9,13 @@
 		android:id="@+id/layout"
 		tools:context="com.yelinaung.luluaung.views.activities.DetailActivity">
 
+	<!--<android.support.v7.widget.RecyclerView-->
+			<!--android:id="@+id/item_recycler"-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="match_parent">-->
+
+
+	<!--</android.support.v7.widget.RecyclerView>-->
 
 	<include layout="@layout/content_detail"/>
 

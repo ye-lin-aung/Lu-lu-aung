@@ -37,7 +37,7 @@ class ImageRecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         this.list = map.values.toMutableList()
         notifyDataSetChanged()
     }
-
+    
     fun getItemAtPosition(position: Int): Datum {
         return list.get(position)
     }

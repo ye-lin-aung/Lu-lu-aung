@@ -26,6 +26,8 @@
 				android:name=".views.activities.DetailActivity"
 				android:label="@string/title_activity_detail"
 				android:theme="@style/AppTheme">
+
+
 		</activity>
 	</application>
 

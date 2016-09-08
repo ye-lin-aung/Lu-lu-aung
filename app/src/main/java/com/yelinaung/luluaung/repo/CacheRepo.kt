@@ -40,7 +40,11 @@ class CacheRepo : Repo {
         }
     }
 
-    fun getItems(): MutableList<Datum> {
+    fun getPosition(item: Datum): Int {
+        return getItems().toList().indexOf(item)
+    }
+
+    fun getItems(): List<Datum> {
         map.values.forEach { v1 ->
             v1.data.forEach { v2 ->
                 if (!hash_map.contains(v2)) {
@@ -49,7 +53,7 @@ class CacheRepo : Repo {
             }
 
         }
-        return hash_map
+        return hash_map.toList()
     }
 
     fun removeItem(key: String) {

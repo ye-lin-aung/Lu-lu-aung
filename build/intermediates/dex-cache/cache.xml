@@ -79,7 +79,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="8885183bc5574c08cbd95d4c55c7d705d23eef1d">
+        sha1="2e240813e5b72ef670e379d882783c2e3d771526">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22910a476e3b42322fa0199bc117450c504eaa8c/classes.dex" />
     </item>
     <item
@@ -129,11 +129,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.github.chrisbanes/PhotoView/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="81d41e53c215976ce172b9f61ef1e8fc2d67cf79">
+        <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.chrisbanes-PhotoView-1.3.0_9652b625f44b0bb72680ee9ef85dc85402c3c19c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="9760f0788382b66eb57155a5977bfbeeca0e31cf">
+        sha1="af589ed7842ad5f222d276b3aca97db3782621e9">
         <dex dex="/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5199f410a46871b80a3fef162ccb2208bad65181/classes.dex" />
     </item>
     <item

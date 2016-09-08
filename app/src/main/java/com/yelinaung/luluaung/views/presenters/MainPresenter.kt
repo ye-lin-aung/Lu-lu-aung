@@ -48,10 +48,10 @@ import javax.inject.Named
 
     override fun resume() {
         view.renderItemList(cache.getItems())
-        useCase.execute(ItemSubscriber(), page)
         view.showProgress()
         view.hideNoData()
         view.hideitems()
+        useCase.execute(ItemSubscriber(), page)
     }
 
     fun paginate() {

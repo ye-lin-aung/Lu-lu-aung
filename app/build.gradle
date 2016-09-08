@@ -6,6 +6,14 @@ def baseURL = "https://graph.facebook.com/"
 def access_token = "1687456281579642%7Cfea2056413885caf86cedf99148afe7a"
 
 android {
+  signingConfigs {
+    config {
+      keyAlias 'luluaung'
+      keyPassword 'iloveyamonezin'
+      storeFile file('/Users/user/Desktop/WorkProjects/luluaung/l2a.jks')
+      storePassword 'iloveyamonezin'
+    }
+  }
   compileSdkVersion 24
   buildToolsVersion "24.0.2"
   defaultConfig {
@@ -20,13 +28,13 @@ android {
     vectorDrawables.useSupportLibrary = true
   }
   buildTypes {
-
     release {
-      minifyEnabled false
+      minifyEnabled true
+      shrinkResources true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      signingConfig signingConfigs.config
     }
   }
-
   sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
   }
@@ -51,7 +59,8 @@ dependencies {
   compile 'io.reactivex:rxandroid:1.2.1'
   compile 'io.reactivex:rxjava:1.1.6'
   compile 'com.google.code.gson:gson:1.7.2'
-  compile "com.android.support:cardview-v7:24.2.0"
+  compile 'com.github.chrisbanes:PhotoView:1.3.0'
+  compile 'com.android.support:cardview-v7:24.2.0'
   testCompile 'junit:junit:4.12'
   compile 'com.android.support:support-v4:24.2.0'
   compile 'com.android.support:appcompat-v7:24.2.0'

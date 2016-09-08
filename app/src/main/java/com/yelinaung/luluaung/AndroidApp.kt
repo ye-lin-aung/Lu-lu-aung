@@ -22,7 +22,6 @@ class AndroidApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
         applicationComponent = DaggerApplicationComponent.builder().applicationModule(ApplicationModule(this)).build();
         repoComponent = DaggerRemoteComponent.builder().applicationComponent(applicationComponent).build()
         dataComponent = DaggerDataComponent.builder().applicationComponent(applicationComponent).build()
