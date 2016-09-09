@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity(), MainView, ViewClick {
     }
 
     override fun click(position: Int, view: View) {
-        startActivity(DetailActivity.intent.getIntent(imageRa.getItemAtPosition(position), this@MainActivity))
+        startActivity(DetailActivity.intent.getIntent(position, this@MainActivity))
     }
 
     override fun processViews() {
@@ -74,6 +74,18 @@ class MainActivity : AppCompatActivity(), MainView, ViewClick {
     override fun showProgress() {
         activity_main.progess.visibility = View.VISIBLE
 
+    }
+
+    override fun loadFirstTime(data: List<Datum>) {
+        if (imageRa.itemCount > 1) {
+            hideProgress()
+            showitems()
+            hideNoData()
+        } else {
+            showProgress()
+            hideNoData()
+            hideitems()
+        }
     }
 
     override fun showitems() {

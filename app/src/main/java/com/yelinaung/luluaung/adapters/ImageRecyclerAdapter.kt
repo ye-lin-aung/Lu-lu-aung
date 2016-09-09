@@ -28,16 +28,15 @@ class ImageRecyclerAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var list: MutableList<Datum> = mutableListOf()
     var click: ViewClick? = null
 
+    fun getItems(): List<Datum> {
+        return list.toList()
+    }
+
     fun replaceList(list: List<Datum>) {
-        list.forEach { v1 ->
-            if (!map.containsKey(v1.id)) {
-                map.put(v1.id!!, v1);
-            }
-        }
-        this.list = map.values.toMutableList()
+        this.list = list.toMutableList()
         notifyDataSetChanged()
     }
-    
+
     fun getItemAtPosition(position: Int): Datum {
         return list.get(position)
     }

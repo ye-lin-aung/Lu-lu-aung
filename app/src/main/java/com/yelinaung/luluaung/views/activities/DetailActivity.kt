@@ -1,116 +1,78 @@
 package com.yelinaung.luluaung.views.activities
 
-import android.app.WallpaperManager
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.os.AsyncTask
 import android.os.Bundle
-import android.os.Environment
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.animation.GlideAnimation
-import com.bumptech.glide.request.target.SimpleTarget
+import com.yelinaung.luluaung.AndroidApp
 import com.yelinaung.luluaung.R
+import com.yelinaung.luluaung.adapters.DetailPagerAdapter
 import com.yelinaung.luluaung.model.network.Datum
 import com.yelinaung.luluaung.util.setFullScreen
+import com.yelinaung.luluaung.views.presenters.DetailPresenter
+import com.yelinaung.luluaung.views.views.DetailView
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.content_detail.*
-import kotlinx.android.synthetic.main.content_detail.view.*
-import uk.co.senab.photoview.PhotoViewAttacher
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
+import pub.devrel.easypermissions.EasyPermissions
+import javax.inject.Inject
 
 const val DETAIL_PARCEL = "detail_parcel"
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity(), DetailView {
 
 
-    var loaded_bitmap: Bitmap? = null
+    @Inject lateinit var detailPresenter: DetailPresenter
+    var position = 0
+
+    override fun loadFirstTime(data: List<Datum>) {
+        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     object intent {
-        fun getIntent(datum: Datum, context: Context): Intent {
-            var intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra(DETAIL_PARCEL, datum)
+        fun getIntent(position: Int, context: Context): Intent {
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(DETAIL_PARCEL, position)
             return intent
         }
     }
 
+    override fun viewItem(data: Datum) {
+        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun renderItemList(data: List<Datum>) {
+        val pager = DetailPagerAdapter(supportFragmentManager, data.size, data)
+        detail_pager.adapter = pager
+
+
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        // Forward results to EasyPermissions
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        detailPresenter.view = this
+    }
+
+    override fun onResume() {
+        super.onResume()
+        detailPresenter.resume()
+        detail_pager.currentItem = position
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
         setFullScreen(this)
+        (application as AndroidApp).dataComponent.inject(this)
+        position = intent.getIntExtra(DETAIL_PARCEL, 0)
 
 
-        val fab = findViewById(R.id.fab) as FloatingActionButton
-        fab.setOnClickListener { view -> Snackbar.make(view, "W8 its still loading", Snackbar.LENGTH_LONG).setAction("Action", null).show() }
-        val datum = intent.getSerializableExtra(DETAIL_PARCEL) as Datum
-        if (datum.name != null ) {
-            name.text = datum.name
-        }
-        val bitmap = Glide.with(this).load(datum.images.get(0).source).asBitmap()
-        bitmap.into(object : SimpleTarget<Bitmap>() {
-            override fun onResourceReady(resource: Bitmap?, glideAnimation: GlideAnimation<in Bitmap>?) {
-                loaded_bitmap = resource!!
-                val attacher: PhotoViewAttacher = PhotoViewAttacher(content_detail.detail_image)
-                if (loaded_bitmap != null) {
-                    content_detail.detail_image.setImageBitmap(loaded_bitmap)
-                    fab.setOnLongClickListener { v ->
-                        DownTask().execute()
-                        attacher.update()
-                        true
-                    }
-                    fab.setOnClickListener { v ->
-                        val myWallpaperManager = WallpaperManager.getInstance(applicationContext)
-                        try {
-                            myWallpaperManager.setBitmap(loaded_bitmap)
-                            Snackbar.make(layout, "Wallpaper set", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-                        } catch (e: IOException) {
-                            e.printStackTrace()
-                            Snackbar.make(layout, "Error Occured please try again later", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-                        }
-                    }
-
-                }
-            }
-        })
-
-
-    }
-
-    inner class DownTask : AsyncTask<Unit, Unit, Boolean>() {
-
-        override fun doInBackground(vararg p0: Unit?): Boolean {
-            var folder = File(Environment.getExternalStorageDirectory().toURI().path + "/lu2aung/")
-            if (!folder.exists()) {
-                folder.mkdirs()
-            }
-            val file = File(folder.toURI().path + System.currentTimeMillis() + ".jpg");
-            file.createNewFile()
-            if (file.exists()) {
-                Log.d("FILEs", file.absolutePath)
-                val os = FileOutputStream(file);
-                loaded_bitmap!!.compress(Bitmap.CompressFormat.JPEG, 100, os);
-                return true
-            } else {
-                return false
-            }
-        }
-
-        override fun onPostExecute(result: Boolean) {
-            super.onPostExecute(result)
-            if (result) {
-                Snackbar.make(layout, "Image  save", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-            } else {
-                Snackbar.make(layout, "Error Occured please try again later", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-
-            }
-        }
     }
 
 }

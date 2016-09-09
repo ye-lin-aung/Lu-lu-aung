@@ -47,11 +47,11 @@ import javax.inject.Named
     }
 
     override fun resume() {
-        view.renderItemList(cache.getItems())
         view.showProgress()
         view.hideNoData()
         view.hideitems()
         useCase.execute(ItemSubscriber(), page)
+        view.loadFirstTime(cache.getItems())
     }
 
     fun paginate() {

@@ -1,0 +1,347 @@
+p com.yelinaung.luluaung.event 0
+d 0/BitmapClick
+d 0/BitmapClick$DefaultImpls
+d 0/ViewClick
+d 0/ViewClick$DefaultImpls
+p com.yelinaung.luluaung.model.network 1
+d 1/ApiConfigKt
+a org.jetbrains.annotations.NotNull 0
+f 0 1/ApiConfigKt KEY_ACCESS_TOKEN
+f 0 1/ApiConfigKt PRETTY
+f 0 1/ApiConfigKt FIELDS
+f 0 1/ApiConfigKt TYPE
+f 0 1/ApiConfigKt LIMIT
+f 0 1/ApiConfigKt AFTER
+m 0 1/ApiConfigKt createMap
+d 1/Cursors
+a com.google.gson.annotations.SerializedName 1
+f 1 1/Cursors before
+a com.google.gson.annotations.Expose 2
+f 2 1/Cursors before
+a org.jetbrains.annotations.Nullable 3
+f 3 1/Cursors before
+m 3 1/Cursors getBefore
+f 1 1/Cursors after
+f 2 1/Cursors after
+f 3 1/Cursors after
+m 3 1/Cursors getAfter
+m 0 1/Cursors withBefore
+m 0 1/Cursors withAfter
+d 1/Datum
+f 1 1/Datum images
+f 2 1/Datum images
+f 0 1/Datum images
+m 0 1/Datum getImages
+f 1 1/Datum name
+f 2 1/Datum name
+f 3 1/Datum name
+m 3 1/Datum getName
+f 1 1/Datum id
+f 2 1/Datum id
+f 3 1/Datum id
+m 3 1/Datum getId
+m 0 1/Datum withImages
+m 0 1/Datum withId
+m 0 1/Datum toString
+d 1/Image
+f 1 1/Image height
+f 2 1/Image height
+f 1 1/Image source
+f 2 1/Image source
+f 3 1/Image source
+m 3 1/Image getSource
+f 1 1/Image width
+f 2 1/Image width
+m 0 1/Image withHeight
+m 0 1/Image withSource
+m 0 1/Image withWidth
+d 1/Item
+f 1 1/Item data
+f 2 1/Item data
+f 0 1/Item data
+m 0 1/Item getData
+f 1 1/Item paging
+f 2 1/Item paging
+f 3 1/Item paging
+m 3 1/Item getPaging
+m 0 1/Item withData
+m 0 1/Item withPaging
+d 1/Paging
+f 1 1/Paging cursors
+f 2 1/Paging cursors
+f 3 1/Paging cursors
+m 3 1/Paging getCursors
+f 1 1/Paging next
+f 2 1/Paging next
+f 3 1/Paging next
+m 3 1/Paging getNext
+f 1 1/Paging previous
+f 2 1/Paging previous
+f 3 1/Paging previous
+m 3 1/Paging getPrevious
+m 0 1/Paging withCursors
+m 0 1/Paging withNext
+m 0 1/Paging withPrevious
+p com.yelinaung.luluaung.views.fragments 2
+d 2/DetailFragments
+d 2/DetailFragments$DownTask
+m 0 2/DetailFragments$DownTask doInBackground
+f 0 2/DetailFragments datum
+m 0 2/DetailFragments getDatum
+f 0 2/DetailFragments animation
+m 0 2/DetailFragments getAnimation
+f 0 2/DetailFragments loaded_bitmap
+m 0 2/DetailFragments getLoaded_bitmap
+m 0 2/DetailFragments onCreateView
+a pub.devrel.easypermissions.AfterPermissionGranted 4
+m 4 2/DetailFragments DownloadTaskIfReady
+d 2/DetailFragments$Companion
+m 0 2/DetailFragments$Companion newInstance
+d 2/DetailFragmentsKt
+f 0 2/DetailFragmentsKt BUNDLE_KEY
+p com.yelinaung.luluaung.util 3
+d 3/ActivityUtilsKt
+d 3/Intents
+d 3/NetworkUtils
+d 3/NetworkUtils$Companion
+m 3 3/NetworkUtils$Companion getNetworkInfo
+p com.yelinaung.luluaung.views.views 4
+d 4/DetailView
+d 4/DetailView$DefaultImpls
+d 4/MainView
+d 4/MainView$DefaultImpls
+p com.yelinaung.luluaung.adapters.viewholders 5
+d 5/ImageViewHolder
+f 0 5/ImageViewHolder img
+m 0 5/ImageViewHolder getImg
+d 5/ProgressViewHolder
+p com.yelinaung.luluaung.views.activities 6
+d 6/DetailActivity
+d 6/DetailActivity$intent
+m 0 6/DetailActivity$intent getIntent
+a javax.inject.Inject 5
+f 5 6/DetailActivity detailPresenter
+f 0 6/DetailActivity detailPresenter
+m 0 6/DetailActivity getDetailPresenter
+d 6/DetailActivityKt
+f 0 6/DetailActivityKt DETAIL_PARCEL
+d 6/MainActivity
+f 5 6/MainActivity userListPresenter
+f 0 6/MainActivity userListPresenter
+m 0 6/MainActivity getUserListPresenter
+f 5 6/MainActivity dataRepo
+f 0 6/MainActivity dataRepo
+m 0 6/MainActivity getDataRepo
+f 0 6/MainActivity imageRa
+m 0 6/MainActivity getImageRa
+p com.yelinaung.luluaung.views.presenters 7
+d 7/DetailPresenter
+a com.yelinaung.luluaung.scope.RepoScope 6
+c 6 7/DetailPresenter
+f 0 7/DetailPresenter cache
+m 0 7/DetailPresenter getCache
+f 0 7/DetailPresenter view
+m 0 7/DetailPresenter getView
+m 5 7/DetailPresenter <init>
+d 7/DetailPresenterImpl
+d 7/DetailPresenterImpl$DefaultImpls
+d 7/MainPresenter
+c 6 7/MainPresenter
+d 7/MainPresenter$ItemSubscriber
+f 0 7/MainPresenter useCase
+m 0 7/MainPresenter getUseCase
+f 0 7/MainPresenter cache
+m 0 7/MainPresenter getCache
+f 0 7/MainPresenter view
+m 0 7/MainPresenter getView
+f 0 7/MainPresenter page
+m 0 7/MainPresenter getPage
+m 5 7/MainPresenter <init>
+d 7/MainPresenterImpl
+d 7/MainPresenterImpl$DefaultImpls
+p com.yelinaung.luluaung.network 8
+d 8/ApiClient
+a retrofit2.http.GET 7
+m 7 8/ApiClient getItem
+m 0 8/ApiClient getItem
+m 7 8/ApiClient getDebug
+m 0 8/ApiClient getDebug
+d 8/ApiClient$DefaultImpls
+p com.yelinaung.luluaung.adapters 9
+d 9/DetailPagerAdapter
+m 3 9/DetailPagerAdapter getItem
+f 0 9/DetailPagerAdapter list
+m 0 9/DetailPagerAdapter getList
+d 9/ImageRecyclerAdapter
+f 0 9/ImageRecyclerAdapter context
+m 0 9/ImageRecyclerAdapter getContext
+f 0 9/ImageRecyclerAdapter map
+m 0 9/ImageRecyclerAdapter getMap
+f 0 9/ImageRecyclerAdapter list
+m 0 9/ImageRecyclerAdapter getList
+f 3 9/ImageRecyclerAdapter click
+m 3 9/ImageRecyclerAdapter getClick
+m 0 9/ImageRecyclerAdapter getItems
+m 0 9/ImageRecyclerAdapter getItemAtPosition
+m 0 9/ImageRecyclerAdapter onCreateViewHolder
+p com.yelinaung.luluaung.module 10
+d 10/ApplicationModule
+a dagger.Module 8
+c 8 10/ApplicationModule
+a javax.inject.Singleton 9
+m 9 10/ApplicationModule context
+a dagger.Provides 10
+m 10 10/ApplicationModule context
+m 0 10/ApplicationModule context
+m 9 10/ApplicationModule threadExecutor
+m 10 10/ApplicationModule threadExecutor
+m 0 10/ApplicationModule threadExecutor
+m 9 10/ApplicationModule mainThread
+m 10 10/ApplicationModule mainThread
+m 0 10/ApplicationModule mainThread
+m 9 10/ApplicationModule remote
+m 10 10/ApplicationModule remote
+m 0 10/ApplicationModule remote
+m 9 10/ApplicationModule dataRepo
+m 10 10/ApplicationModule dataRepo
+m 0 10/ApplicationModule dataRepo
+m 9 10/ApplicationModule provideCache
+m 10 10/ApplicationModule provideCache
+m 0 10/ApplicationModule provideCache
+m 10 10/ApplicationModule retrofit
+m 9 10/ApplicationModule retrofit
+m 0 10/ApplicationModule retrofit
+f 0 10/ApplicationModule application
+m 0 10/ApplicationModule getApplication
+d 10/DataModule
+c 8 10/DataModule
+m 10 10/DataModule provideGetUserListUseCase
+m 6 10/DataModule provideGetUserListUseCase
+a javax.inject.Named 11
+m 11 10/DataModule provideGetUserListUseCase
+m 0 10/DataModule provideGetUserListUseCase
+m 10 10/DataModule provideDetailList
+m 6 10/DataModule provideDetailList
+m 11 10/DataModule provideDetailList
+m 0 10/DataModule provideDetailList
+d 10/RemoteModule
+c 8 10/RemoteModule
+p com.yelinaung.luluaung.widgets 11
+d 11/EndlessRecyclerViewScrollListener
+p com.yelinaung.luluaung.views 12
+d 12/Presenter
+d 12/Presenter$DefaultImpls
+d 12/View
+d 12/View$DefaultImpls
+p com.yelinaung.luluaung.model.network.retrofit 13
+d 13/CustomCallback
+d 13/CustomCallback$DefaultImpls
+p com.yelinaung.luluaung.repo 14
+d 14/CacheRepo
+c 9 14/CacheRepo
+f 0 14/CacheRepo map
+m 0 14/CacheRepo getMap
+f 0 14/CacheRepo list
+m 0 14/CacheRepo getList
+f 0 14/CacheRepo hash_map
+m 0 14/CacheRepo getHash_map
+f 0 14/CacheRepo keyArrays
+m 0 14/CacheRepo getKeyArrays
+m 0 14/CacheRepo getPage
+m 0 14/CacheRepo getItems
+m 5 14/CacheRepo <init>
+d 14/DataRepository
+c 9 14/DataRepository
+f 5 14/DataRepository dataRepository
+f 0 14/DataRepository dataRepository
+m 0 14/DataRepository getDataRepository
+f 0 14/DataRepository datas
+m 0 14/DataRepository getDatas
+m 0 14/DataRepository cacheData
+m 0 14/DataRepository getDataByPages
+m 0 14/DataRepository getData
+m 5 14/DataRepository <init>
+d 14/RemoteDataRepository
+f 0 14/RemoteDataRepository retrofit
+m 0 14/RemoteDataRepository getRetrofit
+f 0 14/RemoteDataRepository context
+m 0 14/RemoteDataRepository getContext
+f 0 14/RemoteDataRepository list
+m 0 14/RemoteDataRepository getList
+m 0 14/RemoteDataRepository getDataByPages
+m 0 14/RemoteDataRepository getData
+m 5 14/RemoteDataRepository <init>
+d 14/Repo
+d 14/Repo$DefaultImpls
+d 14/Repository
+m 0 14/Repository getData
+m 0 14/Repository getDataByPages
+d 14/Repository$DefaultImpls
+p com.yelinaung.luluaung.threads 15
+d 15/JobExecutor
+c 9 15/JobExecutor
+d 15/JobExecutor$JobThreadFactory
+m 0 15/JobExecutor$JobThreadFactory newThread
+d 15/JobExecutor$JobThreadFactory$Companion
+m 5 15/JobExecutor <init>
+d 15/JobExecutor$Companion
+d 15/PostExecutionThread
+m 0 15/PostExecutionThread getScheduler
+d 15/PostExecutionThread$DefaultImpls
+d 15/ThreadExecutor
+d 15/ThreadExecutor$DefaultImpls
+d 15/UIThread
+c 9 15/UIThread
+m 0 15/UIThread getScheduler
+m 5 15/UIThread <init>
+p com.yelinaung.luluaung 16
+d 16/AndroidApp
+f 0 16/AndroidApp applicationComponent
+m 0 16/AndroidApp getApplicationComponent
+f 0 16/AndroidApp repoComponent
+m 0 16/AndroidApp getRepoComponent
+f 0 16/AndroidApp dataComponent
+m 0 16/AndroidApp getDataComponent
+p com.yelinaung.luluaung.component 17
+d 17/ApplicationComponent
+c 9 17/ApplicationComponent
+a dagger.Component 12
+c 12 17/ApplicationComponent
+m 0 17/ApplicationComponent context
+m 0 17/ApplicationComponent retrofit
+m 0 17/ApplicationComponent exeThread
+m 0 17/ApplicationComponent uiThread
+m 0 17/ApplicationComponent dataRepo
+m 0 17/ApplicationComponent cache
+d 17/ApplicationComponent$DefaultImpls
+d 17/DataComponent
+c 6 17/DataComponent
+c 12 17/DataComponent
+d 17/DataComponent$DefaultImpls
+d 17/RemoteComponent
+c 6 17/RemoteComponent
+c 12 17/RemoteComponent
+d 17/RemoteComponent$DefaultImpls
+p com.yelinaung.luluaung.scope 18
+d 18/RepoScope
+a javax.inject.Scope 13
+c 13 18/RepoScope
+a kotlin.annotation.Retention 14
+c 14 18/RepoScope
+a java.lang.annotation.Retention 15
+c 15 18/RepoScope
+p com.yelinaung.luluaung.useCases 19
+d 19/GetItems
+f 0 19/GetItems dataRepository
+m 0 19/GetItems getDataRepository
+m 0 19/GetItems buildObservable
+m 0 19/GetItems buildCache
+m 0 19/GetItems toString
+m 5 19/GetItems <init>
+d 19/ItemCases
+f 0 19/ItemCases threadExecutor
+m 0 19/ItemCases getThreadExecutor
+f 0 19/ItemCases postExecutionThread
+m 0 19/ItemCases getPostExecutionThread
+m 0 19/ItemCases buildObservable
+m 0 19/ItemCases buildCache

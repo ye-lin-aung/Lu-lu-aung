@@ -1,0 +1,4 @@
+#Fri Sep 09 13:32:54 MMT 2016
+base.0=/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex

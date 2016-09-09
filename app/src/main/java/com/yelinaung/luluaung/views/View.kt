@@ -7,5 +7,6 @@ import com.yelinaung.luluaung.model.network.Datum
  */
 interface View {
     fun renderItemList(data: List<Datum>)
+    fun loadFirstTime(data: List<Datum>)
     fun viewItem(data: Datum)
 }
