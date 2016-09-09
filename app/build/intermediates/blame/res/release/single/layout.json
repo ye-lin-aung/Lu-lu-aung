@@ -124,12 +124,12 @@
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/release/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/release/layout/activity_detail.xml",
         "source": "/Users/user/Desktop/WorkProjects/luluaung/app/src/main/res/layout/activity_detail.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/release/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/user/Desktop/WorkProjects/luluaung/app/build/intermediates/res/merged/release/layout/design_text_input_password_icon.xml",

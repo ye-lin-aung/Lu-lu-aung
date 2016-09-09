@@ -27,32 +27,26 @@ abstract class EndlessRecyclerViewScrollListener(private val gridLayoutManager: 
         super.onScrolled(recyclerView, dx, dy)
         val currentFirstVisible = gridLayoutManager.findFirstVisibleItemPosition()
 
-        if (currentFirstVisible > currentFirstVisible) {
+        visibleItemCount = recyclerView!!.childCount
+        totalItemCount = gridLayoutManager.itemCount
+        firstVisibleItem = gridLayoutManager.findFirstVisibleItemPosition()
 
+        if (loading) {
 
-        } else {
-
-
-            visibleItemCount = recyclerView!!.childCount
-            totalItemCount = gridLayoutManager.itemCount
-            firstVisibleItem = gridLayoutManager.findFirstVisibleItemPosition()
-
-            if (loading) {
-
-                if (totalItemCount > previousTotal) {
-                    loading = false
-                    previousTotal = totalItemCount
-                }
-            }
-            if (!loading && totalItemCount - visibleItemCount <= firstVisibleItem + visibleThreshold) {
-                // End has been reached
-
-                // Do something
-
-                onLoadMore()
-                //loading = true;
+            if (totalItemCount > previousTotal) {
+                loading = false
+                previousTotal = totalItemCount
             }
         }
+        if (!loading && totalItemCount - visibleItemCount <= firstVisibleItem + visibleThreshold) {
+            // End has been reached
+
+            // Do something
+
+            onLoadMore()
+            //loading = true;
+        }
+        
     }
 
     fun reset(previousTotal: Int, loading: Boolean) {

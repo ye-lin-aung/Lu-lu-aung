@@ -3586,12 +3586,9 @@ android.support.v7.app.AlertDialog:
 android.support.v7.app.AlertDialog$Builder:
     345:346:public android.support.v7.app.AlertDialog$Builder setTitle(int)
     386:387:public android.support.v7.app.AlertDialog$Builder setMessage(int)
-    396:397:public android.support.v7.app.AlertDialog$Builder setMessage(java.lang.CharSequence)
     408:409:public android.support.v7.app.AlertDialog$Builder setIcon(int)
     437:440:public android.support.v7.app.AlertDialog$Builder setIconAttribute(int)
-    451:453:public android.support.v7.app.AlertDialog$Builder setPositiveButton(int,android.content.DialogInterface$OnClickListener)
     464:466:public android.support.v7.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)
-    477:479:public android.support.v7.app.AlertDialog$Builder setNegativeButton(int,android.content.DialogInterface$OnClickListener)
     490:492:public android.support.v7.app.AlertDialog$Builder setNegativeButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)
     503:505:public android.support.v7.app.AlertDialog$Builder setNeutralButton(int,android.content.DialogInterface$OnClickListener)
     516:518:public android.support.v7.app.AlertDialog$Builder setNeutralButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)
@@ -5172,11 +5169,11 @@ com.yelinaung.luluaung.views.Presenter
 com.yelinaung.luluaung.views.View:
     public abstract void viewItem(com.yelinaung.luluaung.model.network.Datum)
 com.yelinaung.luluaung.views.activities.DetailActivity:
-    23:23:public final com.yelinaung.luluaung.views.presenters.DetailPresenter getDetailPresenter()
-    23:23:public final void setDetailPresenter(com.yelinaung.luluaung.views.presenters.DetailPresenter)
-    24:24:public final int getPosition()
-    24:24:public final void setPosition(int)
-    39:39:public void viewItem(com.yelinaung.luluaung.model.network.Datum)
+    26:26:public final com.yelinaung.luluaung.views.presenters.DetailPresenter getDetailPresenter()
+    26:26:public final void setDetailPresenter(com.yelinaung.luluaung.views.presenters.DetailPresenter)
+    27:27:public final int getPosition()
+    27:27:public final void setPosition(int)
+    42:42:public void viewItem(com.yelinaung.luluaung.model.network.Datum)
     public void _$_clearFindViewByIdCache()
 com.yelinaung.luluaung.views.activities.MainActivity:
     27:27:public final void setUserListPresenter(com.yelinaung.luluaung.views.presenters.MainPresenter)
@@ -5184,16 +5181,14 @@ com.yelinaung.luluaung.views.activities.MainActivity:
     28:28:public final void setDataRepo(com.yelinaung.luluaung.repo.DataRepository)
     29:29:public final com.yelinaung.luluaung.adapters.ImageRecyclerAdapter getImageRa()
     29:29:public final void setImageRa(com.yelinaung.luluaung.adapters.ImageRecyclerAdapter)
-    131:131:public void onError()
-    145:145:public void viewItem(com.yelinaung.luluaung.model.network.Datum)
+    134:134:public void onError()
+    148:148:public void viewItem(com.yelinaung.luluaung.model.network.Datum)
     public void _$_clearFindViewByIdCache()
 com.yelinaung.luluaung.views.fragments.DetailFragments:
     41:41:public final com.yelinaung.luluaung.model.network.Datum getDatum()
     41:41:public final void setDatum(com.yelinaung.luluaung.model.network.Datum)
     42:42:public final void setAnimation(android.view.animation.Animation)
     46:46:public final boolean getResouse_loaded()
-com.yelinaung.luluaung.views.fragments.DetailFragmentsKt:
-    public static final int FILE_PER
 com.yelinaung.luluaung.views.presenters.DetailPresenter:
     16:16:public final com.yelinaung.luluaung.repo.CacheRepo getCache()
     16:16:public final void setCache(com.yelinaung.luluaung.repo.CacheRepo)
@@ -5221,8 +5216,8 @@ com.yelinaung.luluaung.widgets.EndlessRecyclerViewScrollListener:
     19:19:public final void setVisibleItemCount$app_compileReleaseKotlin(int)
     20:20:public final int getTotalItemCount$app_compileReleaseKotlin()
     20:20:public final void setTotalItemCount$app_compileReleaseKotlin(int)
-    59:61:public final void reset(int,boolean)
-    64:65:public final void setLoading(boolean)
+    53:55:public final void reset(int,boolean)
+    58:59:public final void setLoading(boolean)
     10:10:public final int getItem()
     10:10:public final void setItem(int)
 dagger.Component
@@ -8210,16 +8205,8 @@ pub.devrel.easypermissions.AppSettingsDialog$Builder
 pub.devrel.easypermissions.EasyPermissions:
     private static final java.lang.String TAG
     44:44:public EasyPermissions()
-    97:101:public static varargs void requestPermissions(java.lang.Object,java.lang.String,int,java.lang.String[])
-    122:157:public static varargs void requestPermissions(java.lang.Object,java.lang.String,int,int,int,java.lang.String[])
     170:176:public static boolean somePermissionPermanentlyDenied(java.lang.Object,java.util.List)
     187:187:public static boolean permissionPermanentlyDenied(java.lang.Object,java.lang.String)
-    247:254:private static boolean shouldShowRequestPermissionRationale(java.lang.Object,java.lang.String)
-    260:269:private static void executePermissionsRequest(java.lang.Object,java.lang.String[],int)
-    273:280:private static android.app.Activity getActivity(java.lang.Object)
-    44:44:static synthetic void access$000(java.lang.Object,java.lang.String[],int)
-pub.devrel.easypermissions.EasyPermissions$1
-pub.devrel.easypermissions.EasyPermissions$2
 rx.BackpressureOverflow
 rx.BackpressureOverflow$DropLatest
 rx.BackpressureOverflow$DropOldest

@@ -1740,7 +1740,7 @@ layout:activity_main:2130968603 => [layout:layout_toolbar:2130968621, layout:lay
 layout:content_detail:2130968604 => [color:jet_black:2131427373, string:appbar_scrolling_view_behavior:2131099682, drawable:icon:2130837589, dimen:fab_margin:2131165300, color:colorAccent:2131427350, drawable:ic_wallpaper_24dp:2130837588]
 layout:item_image_recycler:2130968618 => [dimen:item_heigh:2131165305]
 layout:item_progress:2130968619 => [dimen:item_heigh:2131165305, dimen:colum_width:2131165269, dimen:progress_size:2131165314]
-layout:layout_no_data:2130968620 => [dimen:no_data_size:2131165309, dimen:wifi_image_size:2131165319, color:jet_black:2131427373, drawable:ic_connection_24dp:2130837587, dimen:text_margin_bottom:2131165316, dimen:text_padding:2131165317, string:no_data:2131099685, dimen:no_data_text_size:2131165310]
+layout:layout_no_data:2130968620 => [dimen:no_data_size:2131165309, dimen:wifi_image_size:2131165319, color:jet_black:2131427373, drawable:ic_connection_24dp:2130837587, dimen:text_margin_bottom:2131165316, dimen:text_padding:2131165317, string:no_data:2131099686, dimen:no_data_text_size:2131165310]
 layout:layout_toolbar:2130968621 => [attr:colorPrimary:2130772097, attr:actionBarSize:2130772036, dimen:toolbar_size:2131165318]
 style:AppTheme:2131230866 => [style:Theme_AppCompat_Light_NoActionBar:2131230989, color:colorPrimary:2131427351, color:colorPrimaryDark:2131427352, color:colorAccent:2131427350]
 style:AppTheme_AppBarOverlay:2131230867 => [style:ThemeOverlay_AppCompat_Dark_ActionBar:2131231000]
@@ -2076,7 +2076,7 @@ anim:design_fab_in:2131034125,
    string:abc_shareactionprovider_share_with_application:2131099665,
    string:appbar_scrolling_view_behavior:2131099682,
    string:bottom_sheet_behavior:2131099683,
-   string:character_counter_pattern:2131099684,
+   string:character_counter_pattern:2131099685,
    string:search_menu_title:2131099667,
    style:Base_AlertDialog_AppCompat:2131230869,
    style:Base_Animation_AppCompat_Dialog:2131230871,
@@ -2318,7 +2318,7 @@ anim:design_fab_in:2131034125,
    layout:item_progress:2130968619,
    layout:layout_no_data:2130968620,
    layout:layout_toolbar:2130968621,
-   string:title_activity_detail:2131099687,
+   string:title_activity_detail:2131099689,
    style:AppTheme:2131230866,
    attr:android:windowTitleStyle:-1,
    id:android:icon2:-1,
@@ -2429,6 +2429,6 @@ Skipped unused resource res/layout/notification_template_part_chronometer.xml: 6
 Skipped unused resource res/layout/notification_template_part_time.xml: 616 bytes (replaced with small dummy file of size 104 bytes)
 Skipped unused resource res/mipmap-hdpi-v4/ic_launcher.png: 3259 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/mipmap-mdpi-v4/ic_launcher.png: 1863 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-xhdpi-v4/ic_launcher.png: 4670 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/mipmap-xxhdpi-v4/ic_launcher.png: 8127 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xhdpi-v4/ic_launcher.png: 5673 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/mipmap-xxhdpi-v4/ic_launcher.png: 9863 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/mipmap-xxxhdpi-v4/ic_launcher.png: 14482 bytes (replaced with small dummy file of size 67 bytes)

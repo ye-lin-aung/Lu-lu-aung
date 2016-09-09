@@ -12345,9 +12345,11 @@ com.yelinaung.luluaung.R$string: int abc_toolbar_collapse_description
 com.yelinaung.luluaung.R$string: int app_name
 com.yelinaung.luluaung.R$string: int appbar_scrolling_view_behavior
 com.yelinaung.luluaung.R$string: int bottom_sheet_behavior
+com.yelinaung.luluaung.R$string: int cancle
 com.yelinaung.luluaung.R$string: int character_counter_pattern
 com.yelinaung.luluaung.R$string: int no_data
 com.yelinaung.luluaung.R$string: int no_intent_handler
+com.yelinaung.luluaung.R$string: int ok
 com.yelinaung.luluaung.R$string: int search_menu_title
 com.yelinaung.luluaung.R$string: int status_bar_notification_info_overflow
 com.yelinaung.luluaung.R$string: int title_activity_detail

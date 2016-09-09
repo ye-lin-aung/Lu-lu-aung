@@ -3,16 +3,16 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 def baseURL = "https://graph.facebook.com/"
-def access_token = "<Your keys goes here>"
+def access_token = <YOUR API KEY HERE>
 
 
 android {
   signingConfigs {
     config {
-      keyAlias 'luluaung'
-      keyPassword 'iloveyamonezin'
-      storeFile file('/Users/user/Desktop/WorkProjects/luluaung/l2a.jks')
-      storePassword 'iloveyamonezin'
+      keyAlias KEY_ALIAS
+      keyPassword KEYPASSWORD
+      storeFile file('../l2a.jks')
+      storePassword STOREPASSWORD
     }
   }
   compileSdkVersion 24
@@ -21,8 +21,8 @@ android {
     applicationId "com.yelinaung.luluaung"
     minSdkVersion 16
     targetSdkVersion 24
-    versionCode 1
-    versionName "1.0"
+    versionCode 3
+    versionName "1.0.2"
     buildConfigField('String', 'BASE_URL', "\"${baseURL}\"")
     buildConfigField('String', 'ACESS_TOKEN', "\"${access_token}\"")
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

@@ -1,14 +1,17 @@
 package com.yelinaung.luluaung.views.activities
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AppCompatActivity
 import com.yelinaung.luluaung.AndroidApp
 import com.yelinaung.luluaung.R
 import com.yelinaung.luluaung.adapters.DetailPagerAdapter
 import com.yelinaung.luluaung.model.network.Datum
 import com.yelinaung.luluaung.util.setFullScreen
+import com.yelinaung.luluaung.views.fragments.FILE_PER
 import com.yelinaung.luluaung.views.presenters.DetailPresenter
 import com.yelinaung.luluaung.views.views.DetailView
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -17,7 +20,7 @@ import javax.inject.Inject
 
 const val DETAIL_PARCEL = "detail_parcel"
 
-class DetailActivity : AppCompatActivity(), DetailView {
+class DetailActivity : AppCompatActivity(), DetailView, ActivityCompat.OnRequestPermissionsResultCallback {
 
 
     @Inject lateinit var detailPresenter: DetailPresenter
@@ -48,7 +51,6 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
         // Forward results to EasyPermissions
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
@@ -60,6 +62,9 @@ class DetailActivity : AppCompatActivity(), DetailView {
 
     override fun onResume() {
         super.onResume()
+        if (!EasyPermissions.hasPermissions(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            EasyPermissions.requestPermissions(this,"The app needs external storage option to save photos",FILE_PER, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
         detailPresenter.resume()
         detail_pager.currentItem = position
 

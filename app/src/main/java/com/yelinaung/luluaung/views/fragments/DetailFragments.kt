@@ -57,6 +57,7 @@ class DetailFragments : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         datum = arguments.getSerializable(BUNDLE_KEY) as Datum
+
         return inflater!!.inflate(R.layout.content_detail, container, false)
     }
 
@@ -99,6 +100,7 @@ class DetailFragments : Fragment() {
                 fab.startAnimation(animation)
                 layout.fab.visibility = View.VISIBLE
                 layout.fab.setOnLongClickListener { v2 ->
+
                     DownloadTaskIfReady()
                     true
                 }

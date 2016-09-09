@@ -77,14 +77,17 @@ class MainActivity : AppCompatActivity(), MainView, ViewClick {
     }
 
     override fun loadFirstTime(data: List<Datum>) {
+        imageRa.replaceList(data)
         if (imageRa.itemCount > 1) {
             hideProgress()
             showitems()
             hideNoData()
+
         } else {
             showProgress()
             hideNoData()
             hideitems()
+            userListPresenter.paginate()
         }
     }
 

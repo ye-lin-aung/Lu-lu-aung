@@ -51,11 +51,11 @@ import javax.inject.Named
         view.hideNoData()
         view.hideitems()
         useCase.execute(ItemSubscriber(), page)
+
         view.loadFirstTime(cache.getItems())
     }
 
     fun paginate() {
-
         if (!loading) {
             loading = true
             useCase.execute(ItemSubscriber(), page)
@@ -64,7 +64,6 @@ import javax.inject.Named
 
     private inner class ItemSubscriber : Subscriber<Item>() {
         override fun onCompleted() {
-
             view.renderItemList(cache.getItems())
             view.processViews()
             loading = false
@@ -76,7 +75,6 @@ import javax.inject.Named
         }
 
         override fun onNext(t: Item?) {
-
             if (t!!.data.count() > 0) {
                 view.hideProgress()
                 view.showitems()
