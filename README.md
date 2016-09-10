@@ -1,10 +1,10 @@
 # Lu Lu Aung Android Application 
 
-![alt](http://link)
+![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/1472981121_G12_Girl-1_black.png)
 
 ## Simple android showcase application with RxJava , Kotlin , Dagger.
 
-![alt](http://link) ![alt](http://link) ![alt](http://link) 
+![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212733_framed.png) ![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212804_framed.png) ![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212821_framed.png) 
 
 
 ####  Notes to run the application
