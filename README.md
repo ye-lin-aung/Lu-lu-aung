@@ -1,11 +1,11 @@
 # Lu Lu Aung Android Application 
 
 
-![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/1472981121_G12_Girl-1_black.png)
+<img src="https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/1472981121_G12_Girl-1_black.png" height=100/>
 
 ## Simple android showcase application with RxJava , Kotlin , Dagger.
 
-![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212733_framed.png) ![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212804_framed.png) ![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212821_framed.png) 
+<img src="https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212733_framed.png" height=310/> <img src="https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212804_framed.png" height=310/><img src="https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/device-2016-09-09-212821_framed.png" height=310/> 
 
 
 ####  Notes to run the application
