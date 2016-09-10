@@ -1,4 +1,4 @@
-# Lu lu aung Android Application
+# Lu Lu Aung Android Application 
 
 ![alt](http://link)
 
@@ -17,7 +17,7 @@ generate from Facebook Web Graph Api
 * Clean the project if you got unreference error  or update kotlin version to 1.0.4-eab-100
 
 
-# License #
+## License 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, December 2004
 
@@ -31,10 +31,3 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 You just DO WHAT THE FUCK YOU WANT TO.
 
 ```
-
-
-
-
-
-
-
