@@ -1,5 +1,6 @@
 # Lu Lu Aung Android Application 
 
+
 ![alt](https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/1472981121_G12_Girl-1_black.png)
 
 ## Simple android showcase application with RxJava , Kotlin , Dagger.
@@ -17,6 +18,9 @@ generate from Facebook Web Graph Api
 * Clean the project if you got unreference error  or update kotlin version to 1.0.4-eab-100
 
 
+# Download
+<a href="https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/app/app-release.apk" target="_blank"><img src="http://cognition.ouc.ac.cy/cclab/images/DownloadButton.png" alt="IMAGE ALT TEXT HERE" width="100" height="100"  />
+</a>
 ## License 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE Version 2, December 2004
