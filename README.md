@@ -1,5 +1,11 @@
 # Lu Lu Aung Android Application 
 
+![alt text](https://lh3.googleusercontent.com/Rf3WwCSItKciKgm3j1qYyrZ_eaMSqA9rOLdznCl8E0xUO4_n93618MacFvv7ZecemFA=w300-rw "Drunky")
+
+ <a href="https://play.google.com/store/apps/details?id=com.yelinaung.luluaung" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="IMAGE ALT TEXT HERE" width="200" height="100"  />
+</a>
+
+
 
 <img src="https://github.com/ye-lin-aung/Lu-lu-aung/raw/master/Photos/1472981121_G12_Girl-1_black.png" height=100/>
 
